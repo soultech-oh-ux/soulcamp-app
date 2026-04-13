@@ -57,6 +57,7 @@ addRow(sn,data,hdr);
 }
 
 function saveData(data){
+if(!data)return{ok:false,error:"no data received"};
 var type=data.type;if(!type)return{ok:false,error:'no type'};
 var sn=SHEETS[type];if(!sn)return{ok:false,error:'bad type:'+type};
 var h=HEADERS[sn];
@@ -88,7 +89,8 @@ try{
 }
 
 function doPost(e){
-try{return out(saveData(JSON.parse(e.postData.contents)));}
+var raw="";
+try{raw=e.postData?e.postData.contents:"";return out(saveData(JSON.parse(raw)));}
 catch(err){return out({ok:false,error:err.message});}
 }
 
