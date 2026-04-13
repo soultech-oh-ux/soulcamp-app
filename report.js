@@ -5,7 +5,7 @@ async function tReport(c){
   c.innerHTML='<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
   var results=await Promise.all([
     gasGet('학생목록'),gasGet('신앙온도'),gasGet('신앙일기'),
-    gasGet('삼줄기도'),gasGet('공감QT'),gasGet('적용점'),
+    gasGet('삼줄기도'),gasGet('공감QT'),gasGet('나의결단'),
     gasGet('QT'),gasGet('기도제목')
   ]);
   var students=results[0],temp=results[1],diary=results[2],prayer3=results[3],
@@ -31,7 +31,7 @@ async function tReport(c){
     +'<div>\uD83D\uDCD4 신앙일기: <strong>'+diary.length+'</strong>건</div>'
     +'<div>\uD83D\uDD4A\uFE0F 3줄기도: <strong>'+prayer3.length+'</strong>건</div>'
     +'<div>\u271D\uFE0F 공감QT: <strong>'+empathy.length+'</strong>건</div>'
-    +'<div>\uD83C\uDFD5\uFE0F 결단/적용점: <strong>'+apply.length+'</strong>건</div>'
+    +'<div>\uD83C\uDFD5\uFE0F 나의 결단: <strong>'+apply.length+'</strong>건</div>'
     +'<div>\uD83D\uDCD6 QT: <strong>'+qt.length+'</strong>건</div>'
     +'<div>\uD83D\uDE4F 기도제목: <strong>'+pray.length+'</strong>건</div>'
     +'</div></div>';

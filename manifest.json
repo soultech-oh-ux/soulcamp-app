@@ -1,7 +1,7 @@
 {
   "name": "수련회 영성지도 시스템",
   "short_name": "영성지도",
-  "description": "수련회 적용점·신앙일기·기도·온도계",
+  "description": "수련회 나의결단·신앙일기·기도·온도계",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#3D6B1E",
