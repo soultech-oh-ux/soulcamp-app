@@ -602,9 +602,20 @@ function checkPw(){
     for(let i=0;i<6;i++){const d=document.getElementById('d'+i);d.classList.remove('on');d.classList.add('err');}
     setTimeout(()=>{for(let i=0;i<6;i++)document.getElementById('d'+i).classList.remove('err');pwBuf='';dots();pwLock=false;},600);}
 }
-function launch(){
+async function launch(){
   const ma=document.getElementById('main-app');ma.style.display='flex';ma.style.flexDirection='column';
   document.getElementById('h-badge').textContent=role==='student'?me.이름+' ('+me.학년+')':'교사 모드 🔐';
+  if(role==='student'){
+    const[t,d,p3,eq,ap,q,pr,ms]=await Promise.all([
+      gasGet('신앙온도',me.id),gasGet('신앙일기',me.id),
+      gasGet('삼줄기도',me.id),gasGet('공감QT',me.id),
+      gasGet('적용점',me.id),gasGet('QT',me.id),
+      gasGet('기도제목',me.id),gasGet('메시지')
+    ]);
+    C.신앙온도=t;C.신앙일기=d;C.삼줄기도=p3;
+    C.공감QT=eq;C.적용점=ap;C.qt=q;C.기도제목=pr;
+    C.메시지=ms.filter(m=>m.수신자===me.이름||m.발신자===me.이름||m.수신자==='전체');
+  }
   buildNav();showTab(0);
 }
 
@@ -1555,7 +1566,6 @@ async function tToday(c){
   var activeIds=new Set([...tT,...tD,...tP,...tE,...tQ].map(r=>r.학생id));
 
   var h='<div class="card"><div class="card-title">📋 오늘의 기록</div><div class="card-sub">'+today+' 학생 활동 현황</div></div>';
-
   h+='<div class="stat-grid">';
   h+='<div class="stat-box"><div class="stat-num">'+activeIds.size+'/'+students.length+'</div><div class="stat-lbl">참여 학생</div></div>';
   h+='<div class="stat-box"><div class="stat-num">'+total+'</div><div class="stat-lbl">총 기록</div></div>';
@@ -1575,7 +1585,6 @@ async function tToday(c){
     tT.forEach(r=>{h+='<div style="display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:.5px solid var(--border);font-size:13px"><span><strong>'+r.이름+'</strong> '+r.이모지+' '+r.온도+'/5</span><span style="color:#888">'+(r.한마디||'')+'</span></div>';});
     h+='</div>';
   }
-
   if(tD.length){
     h+='<div class="card"><div class="card-title">📔 신앙 일기 ('+tD.length+'건)</div>';
     tD.forEach(r=>{
@@ -1588,7 +1597,6 @@ async function tToday(c){
     });
     h+='</div>';
   }
-
   if(tP.length){
     h+='<div class="card"><div class="card-title">🕊️ 3줄 기도 ('+tP.length+'건)</div>';
     tP.forEach(r=>{
@@ -1601,7 +1609,6 @@ async function tToday(c){
     });
     h+='</div>';
   }
-
   if(tE.length){
     h+='<div class="card"><div class="card-title">✝️ 공감QT ('+tE.length+'건)</div>';
     tE.forEach(r=>{
@@ -1609,7 +1616,6 @@ async function tToday(c){
     });
     h+='</div>';
   }
-
   if(tQ.length){
     h+='<div class="card"><div class="card-title">📖 QT ('+tQ.length+'건)</div>';
     tQ.forEach(r=>{
@@ -1623,10 +1629,8 @@ async function tToday(c){
   }
 
   if(total===0) h+='<div class="card"><div class="empty">오늘은 아직 기록이 없어요. 학생들이 활동하면 여기에 표시됩니다!</div></div>';
-
   c.innerHTML=h;
 }
-
 
 // ─── 공통 유틸 ─────────────────────────────────────
 function toStr(){return new Date().toISOString().split('T')[0];}
