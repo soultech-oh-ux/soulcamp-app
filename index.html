@@ -573,10 +573,8 @@ let selectedChoice=null;
 
 async function gasPost(p){
   try{
-    var url=GAS_URL+'?action=save&data='+encodeURIComponent(JSON.stringify(p));
-    var r=await fetch(url);
-    var t=await r.text();
-    try{return JSON.parse(t);}catch(x){return{ok:true};}
+    var r=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(p),mode:'no-cors'});
+    try{var t=await r.text();return JSON.parse(t);}catch(x){return{ok:true};}
   }catch(e){console.error('gasPost err',e);return{ok:false};}
 }
 async function gasGet(type,id=''){try{let url=GAS_URL+'?type='+encodeURIComponent(type);if(id)url+='&id='+encodeURIComponent(id);const r=await fetch(url);if(!r.ok)return[];const j=await r.json();return j.ok?j.data:[];}catch(e){console.error('GET err',e);return[];}}

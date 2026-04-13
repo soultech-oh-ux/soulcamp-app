@@ -79,7 +79,12 @@ return{ok:true};
 function doGet(e){
 try{
   var p=e.parameter||{};
-  if(p.action==='save'&&p.data){return out(saveData(JSON.parse(p.data)));}
+  if(p.action==='save'&&p.data){
+    var parsed=null;
+    try{parsed=JSON.parse(p.data);}catch(pe){return out({ok:false,error:'JSON parse error: '+pe.message});}
+    if(!parsed)return out({ok:false,error:'parsed data is null'});
+    return out(saveData(parsed));
+  }
   if(!p.type)return out({ok:true,msg:'API OK'});
   var sn=SHEETS[p.type];if(!sn)return out({ok:false,error:'bad type'});
   var data=sheetToJson(sn);
@@ -89,9 +94,16 @@ try{
 }
 
 function doPost(e){
-var raw="";
-try{raw=e.postData?e.postData.contents:"";return out(saveData(JSON.parse(raw)));}
-catch(err){return out({ok:false,error:err.message});}
+try{
+  var raw='';
+  if(e&&e.postData&&e.postData.contents){raw=e.postData.contents;}
+  else if(e&&e.parameter&&e.parameter.data){raw=e.parameter.data;}
+  if(!raw)return out({ok:false,error:'no post data'});
+  var parsed=null;
+  try{parsed=JSON.parse(raw);}catch(pe){return out({ok:false,error:'JSON parse error: '+pe.message});}
+  if(!parsed)return out({ok:false,error:'parsed data is null'});
+  return out(saveData(parsed));
+}catch(err){return out({ok:false,error:err.message});}
 }
 
 function out(obj){return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);}
