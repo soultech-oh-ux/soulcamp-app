@@ -617,7 +617,7 @@ const ST=[
   {icon:'🏕️',label:'나의결단',fn:sApply},
   {icon:'💬',label:'메시지',fn:sMsg},
 ];
-const TT=[
+const TT=[{icon:'📋',label:'오늘의 기록',fn:tToday},
   {icon:'🌡️',label:'온도 현황',fn:tTemp},
   {icon:'📔',label:'일기 현황',fn:tDiary},
   {icon:'🕊️',label:'기도 현황',fn:tPrayer3},
@@ -1492,16 +1492,141 @@ async function tQT(c){
 }
 
 // ════════════════════════════════════════════════════
-//  교사 탭 4: 메시지
+// ════════════════════════════════════════════════════
+//  교사 탭 4: 메시지 (답장 기능 포함)
 // ════════════════════════════════════════════════════
 async function tMsg(c){
   c.innerHTML='<div class="card"><div class="empty">불러오는 중...</div></div>';
   const[students,msgs]=await Promise.all([gasGet('학생목록'),gasGet('메시지')]);
-  const received=msgs.filter(m=>m.수신자==='교사').reverse().slice(0,15);
-  c.innerHTML='<div class="card"><div class="card-title">💌 메시지 보내기</div><div class="form-row"><label>수신자</label><select id="msg-to"><option value="전체">전체 학생에게</option>'+students.map(s=>'<option value="'+s.이름+'">'+s.이름+' ('+s.학년+')</option>').join('')+'</select></div><div class="form-row"><label>내용</label><textarea id="teacher-msg" placeholder="학생에게 보낼 격려 메시지를 작성하세요..."></textarea></div><div style="margin-bottom:.75rem"><div class="section-label">빠른 템플릿</div><div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem"><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'오늘 신앙 온도 잘 체크했어요? 하나님과 가까운 하루 되길 기도해요 🌡️\')">온도계 격려</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'이번 주 QT는 잘 하고 있나요? 말씀과 함께하는 방학이 되길 기도해요 📖\')">QT 격려</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'하나님이 너를 사랑하신다는 것, 오늘도 잊지 말아요 ❤️\')">사랑 메시지</button></div></div><button class="btn btn-green btn-full" onclick="sendTeachMsg()">메시지 전송</button></div><div class="card"><div class="card-title">📨 학생에게 받은 메시지</div>'+(received.length?received.map(m=>'<div class="msg-item msg-recv"><div class="msg-meta">'+m.발신자+' → 교사</div><div class="msg-text">'+m.내용+'</div></div>').join(''):'<div class="empty">받은 메시지가 없어요</div>')+'</div>';
+  const received=msgs.filter(m=>m.수신자==='교사').reverse();
+  const sent=msgs.filter(m=>m.발신자==='교사').reverse();
+  var convHtml='';
+  if(received.length){
+    received.forEach(function(m,idx){
+      var myReplies=sent.filter(function(s){return s.수신자===m.발신자;});
+      var lastReply=myReplies.length?myReplies[0]:null;
+      convHtml+='<div style="border:1.5px solid var(--border);border-radius:14px;padding:.85rem;margin-bottom:.75rem;background:#fff">';
+      convHtml+='<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem"><strong style="color:var(--g1)">'+m.발신자+'</strong><span style="font-size:10px;color:#aaa">'+(m.저장일시||'')+'</span></div>';
+      convHtml+='<div style="background:#F0FDF4;border-radius:10px;padding:.6rem;font-size:13px;margin-bottom:.5rem">'+m.내용+'</div>';
+      if(lastReply){
+        convHtml+='<div style="background:#EDE9FE;border-radius:10px;padding:.6rem;font-size:12px;color:#6C3CE1;margin-bottom:.5rem"><strong>교사 답장:</strong> '+lastReply.내용+'</div>';
+      }
+      convHtml+='<div style="display:flex;gap:.4rem"><input type="text" id="reply-'+idx+'" placeholder="답장 입력..." style="flex:1;padding:.45rem .7rem;border:1.5px solid var(--border);border-radius:10px;font-size:12px"><button class="btn btn-green" style="font-size:11px;padding:.4rem .8rem" onclick="replyMsg(\''+m.발신자+'\','+idx+')">답장</button></div>';
+      convHtml+='</div>';
+    });
+  }else{
+    convHtml='<div class="empty">받은 메시지가 없어요</div>';
+  }
+  c.innerHTML='<div class="card"><div class="card-title">📨 학생 메시지 & 답장</div><div class="card-sub">학생이 보낸 메시지를 확인하고 답장하세요</div>'+convHtml+'</div>'
+    +'<div class="card"><div class="card-title">💌 새 메시지 보내기</div><div class="form-row"><label>수신자</label><select id="msg-to"><option value="전체">전체 학생에게</option>'+students.map(s=>'<option value="'+s.이름+'">'+s.이름+' ('+s.학년+')</option>').join('')+'</select></div><div class="form-row"><label>내용</label><textarea id="teacher-msg" placeholder="학생에게 보낼 격려 메시지를 작성하세요..."></textarea></div><div style="margin-bottom:.75rem"><div class="section-label">빠른 템플릿</div><div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem"><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'오늘 하루도 하나님과 동행하길 기도해요 🙏\')">격려</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'기도 제목 잘 받았어요. 함께 기도할게요 ❤️\')">기도 응답</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'하나님이 너를 사랑하신다는 것, 오늘도 잊지 말아요 ❤️\')">사랑</button></div></div><button class="btn btn-green btn-full" onclick="sendTeachMsg()">메시지 전송</button></div>';
+}
+async function replyMsg(studentName,idx){
+  var input=document.getElementById('reply-'+idx);
+  var txt=input.value.trim();
+  if(!txt){alert('답장 내용을 입력해주세요');return;}
+  await gasPost({type:'메시지',발신자:'교사',수신자:studentName,내용:txt});
+  toast(studentName+'에게 답장을 보냈습니다 ✉️');
+  input.value='';
+  tMsg(document.getElementById('mc'));
 }
 function setTpl(t){document.getElementById('teacher-msg').value=t;}
-async function sendTeachMsg(){const 내용=document.getElementById('teacher-msg').value.trim();const 수신자=document.getElementById('msg-to').value;if(!내용){alert('메시지를 작성해주세요');return;}await gasPost({type:'메시지',발신자:'교사',수신자,내용});toast(수신자+'에게 메시지를 보냈습니다 ✉️');document.getElementById('teacher-msg').value='';}
+async function sendTeachMsg(){const txt=document.getElementById('teacher-msg').value.trim();const to=document.getElementById('msg-to').value;if(!txt){alert('메시지를 작성해주세요');return;}await gasPost({type:'메시지',발신자:'교사',수신자:to,내용:txt});toast(to+'에게 메시지를 보냈습니다 ✉️');document.getElementById('teacher-msg').value='';tMsg(document.getElementById('mc'));}
+
+// ════════════════════════════════════════════════════
+//  교사 탭: 오늘의 기록 (1일 대시보드)
+// ════════════════════════════════════════════════════
+async function tToday(c){
+  c.innerHTML='<div class="card"><div class="empty">오늘의 기록을 불러오는 중...</div></div>';
+  var results=await Promise.all([
+    gasGet('학생목록'),gasGet('신앙온도'),gasGet('신앙일기'),
+    gasGet('삼줄기도'),gasGet('공감QT'),gasGet('적용점'),
+    gasGet('QT'),gasGet('기도제목'),gasGet('메시지')
+  ]);
+  var students=results[0],temp=results[1],diary=results[2],prayer3=results[3],
+      empathy=results[4],apply=results[5],qt=results[6],pray=results[7],msgs=results[8];
+  var today=toStr();
+  var tT=temp.filter(r=>r.날짜===today);
+  var tD=diary.filter(r=>r.날짜===today);
+  var tP=prayer3.filter(r=>r.날짜===today);
+  var tE=empathy.filter(r=>r.날짜===today);
+  var tQ=qt.filter(r=>r.날짜===today);
+  var tM=msgs.filter(m=>m.수신자==='교사').reverse().slice(0,5);
+  var total=tT.length+tD.length+tP.length+tE.length+tQ.length;
+  var activeIds=new Set([...tT,...tD,...tP,...tE,...tQ].map(r=>r.학생id));
+
+  var h='<div class="card"><div class="card-title">📋 오늘의 기록</div><div class="card-sub">'+today+' 학생 활동 현황</div></div>';
+
+  h+='<div class="stat-grid">';
+  h+='<div class="stat-box"><div class="stat-num">'+activeIds.size+'/'+students.length+'</div><div class="stat-lbl">참여 학생</div></div>';
+  h+='<div class="stat-box"><div class="stat-num">'+total+'</div><div class="stat-lbl">총 기록</div></div>';
+  h+='<div class="stat-box"><div class="stat-num">'+tM.length+'</div><div class="stat-lbl">받은 메시지</div></div>';
+  h+='</div>';
+
+  var inactive=students.filter(s=>!activeIds.has(s.학생id));
+  if(inactive.length&&students.length){
+    h+='<div class="card"><div class="card-title" style="color:#EF4444">⚠️ 미참여 학생 ('+inactive.length+'명)</div>';
+    h+=inactive.map(s=>'<span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:12px;padding:.25rem .6rem;border-radius:8px;margin:.2rem">'+s.이름+' ('+s.학년+')</span>').join('');
+    h+='</div>';
+  }
+
+  if(tT.length){
+    var avg=Math.round(tT.reduce((s,r)=>s+(+r.온도||0),0)/tT.length*10)/10;
+    h+='<div class="card"><div class="card-title">🌡️ 신앙 온도 ('+tT.length+'건, 평균 '+avg+')</div>';
+    tT.forEach(r=>{h+='<div style="display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:.5px solid var(--border);font-size:13px"><span><strong>'+r.이름+'</strong> '+r.이모지+' '+r.온도+'/5</span><span style="color:#888">'+(r.한마디||'')+'</span></div>';});
+    h+='</div>';
+  }
+
+  if(tD.length){
+    h+='<div class="card"><div class="card-title">📔 신앙 일기 ('+tD.length+'건)</div>';
+    tD.forEach(r=>{
+      h+='<div style="border:1px solid var(--border);border-radius:12px;padding:.7rem;margin-bottom:.5rem">';
+      h+='<strong style="font-size:13px">'+r.이름+'</strong>';
+      if(r.느낀순간)h+='<div style="font-size:12px;margin-top:.3rem">🌿 '+r.느낀순간+'</div>';
+      if(r.고백)h+='<div style="font-size:12px;margin-top:.2rem">🙏 '+r.고백+'</div>';
+      if(r.바라는것)h+='<div style="font-size:12px;margin-top:.2rem">⭐ '+r.바라는것+'</div>';
+      h+='</div>';
+    });
+    h+='</div>';
+  }
+
+  if(tP.length){
+    h+='<div class="card"><div class="card-title">🕊️ 3줄 기도 ('+tP.length+'건)</div>';
+    tP.forEach(r=>{
+      h+='<div style="border:1px solid var(--border);border-radius:12px;padding:.7rem;margin-bottom:.5rem">';
+      h+='<strong style="font-size:13px">'+r.이름+'</strong>';
+      if(r.감사)h+='<div style="font-size:12px;margin-top:.3rem">🌿 감사: '+r.감사+'</div>';
+      if(r.고백)h+='<div style="font-size:12px;margin-top:.2rem">🙏 고백: '+r.고백+'</div>';
+      if(r.간구)h+='<div style="font-size:12px;margin-top:.2rem">⭐ 간구: '+r.간구+'</div>';
+      h+='</div>';
+    });
+    h+='</div>';
+  }
+
+  if(tE.length){
+    h+='<div class="card"><div class="card-title">✝️ 공감QT ('+tE.length+'건)</div>';
+    tE.forEach(r=>{
+      h+='<div style="padding:.4rem 0;border-bottom:.5px solid var(--border);font-size:13px"><strong>'+r.이름+'</strong> '+(r.말씀구절||'')+' → '+(r.선택||'')+' <span style="color:#888">'+(r.한마디||'')+'</span></div>';
+    });
+    h+='</div>';
+  }
+
+  if(tQ.length){
+    h+='<div class="card"><div class="card-title">📖 QT ('+tQ.length+'건)</div>';
+    tQ.forEach(r=>{
+      h+='<div style="border:1px solid var(--border);border-radius:12px;padding:.7rem;margin-bottom:.5rem">';
+      h+='<strong style="font-size:13px">'+r.이름+'</strong> · '+(r.말씀||'');
+      if(r.묵상)h+='<div style="font-size:12px;margin-top:.3rem">💭 '+r.묵상+'</div>';
+      if(r.적용)h+='<div style="font-size:12px;margin-top:.2rem">→ '+r.적용+'</div>';
+      h+='</div>';
+    });
+    h+='</div>';
+  }
+
+  if(total===0) h+='<div class="card"><div class="empty">오늘은 아직 기록이 없어요. 학생들이 활동하면 여기에 표시됩니다!</div></div>';
+
+  c.innerHTML=h;
+}
+
 
 // ─── 공통 유틸 ─────────────────────────────────────
 function toStr(){return new Date().toISOString().split('T')[0];}
