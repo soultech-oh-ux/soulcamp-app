@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#2D5016">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="수련회 영성지도">
+<meta name="application-name" content="수련회 영성지도">
+<meta name="description" content="수련회 적용점·QT·기도·신앙 온도계">
+
+<!-- 홈 화면 아이콘 (iOS / Android) -->
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="152x152" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAOSUlEQVR42u2d229U1xWHI/NqCcnPlUXUBx6Kmkp+IVIQoY2StDhYSKmwaJRY1BJNCmXCQFVgABthEnMRNxMRApibBQQBInaobLmhSoXaV/4BpDzxZ+ye7/icdjBjz3g8Z/bth/ST8W3OPmutb7zP3mut3fGaY//W/bm7K1FPor5Eg4nKiSqJDkteqZL5bjDzJT7tci3eOiwHe2ei3kQjiaYTvUhkpKD1IvP1SOb7zqgASG64O1Ep0ayCQco0m8VEd7AAJDfXn+ixnC3VETHSHwQAyY2syOaBz+VYaYl6nsXOCi8ByP6kaU4vteKZoeQNANkT/zM5TmqxiKk+ZwFIBrcy0RU5SipYxNhKpwDIlrN+knOkNolY63UCgGzDQ06RbKhiFYBkANfkBMmyrrUdgGwHd1rGlxzRdLM7yh1NBD+5Ok9ldMkxPW0m16ijiXd+Bb/kMgSdRQKgaY/k/HSoEAD0wCuF+GDcoaVOKeYl0o4GN7lkUMlH9S4LgCy9QTu8ks87xiuXA4ByeyTvc4eaAiDL6pQBpRDU1wwASmmWgkmlXhIAWTGLDCeFpFJDAGRljKrkkkKsLFvRCABlGUsKVOVGAFABuxRsof2iAGStS2QoKWT1LwaA+vZIwfcdqgnAurmObTKQFIO6awGgpU8puiXRagDUq1OKRbMvAZBVeskwLdKv//Jz88GeX5otB9aagaEN5k8jvzW7RvvM3lO/N/vObDUHz31shsYGzPCFbebIhT+mH/mcr/N9fo6f5/f4fV6H1+N1Zd+WqbMaAKU8N6n1O1aZvr/+ynx8eL3Z+eUHZv+ZP5hjF7ebc1d3m8sTFTPx7Yi5//CUmZoaMzN/v2SezIybf/3jpnn6w4T595Pb5j//vJN+5HO+zvf5OX6e3+P3eR1ej9fl9bkO1+O6XF9+aD5VOgdgRAZpXL8r/yINwNLxzek7+Pnxsrlx94h59N1Z88PM1TSoixKvz3W4Htfl+oyD8TAu+adhjVQDoFrfOtq4Z43ZNvwb87fT/ebU5Z3m+p1hMzk5lr5zFxnw9cT1GQfjYVyMj3EyXvmtfu1wDoByfxaYy3906K10Tk5w3fr2aDo9sRnw9cT4GCfjZdyMX88OtXODUgDWzfX5kUGq3+3La8z2o++n04vLEwfN4++/cjroFxLjZvzcB/fDfcm/L6kLAHpkiDlt2vtG+oB5/NJn5va9L8yPsze8DPz54j64H+6L++M+5e9UPR2q/OpOlxh3frkpnTbce3AyiKBfSNwf98n9ct+xV4oBwGCsBni3tDpda+ed8d6DE0EH/qsgnEjvm/vHDpHGwGBHrPn/LBsyN2adPV+Pj03cN/ePHbBHjPUBABBV0ys2j1gduXRzf+Fr9r4IO2AP7IJ9YmqeBQCHY7lh1sdHv/7UPHx0WoFfQ9gF+2CnSGLicBQAsENaPvmh+eZWJU03ULAvLOyDnbBXBDvL4QPQf+DNdI4b+upOEatF2A37CQBPNXjkHXP6yi4z7fjuravCbtgPOwoAj/T2ztfTdW4e7Gzn6vgu7IcdsSd2FQCO673PV6erGWRLKoBbJ+yJXbGvAHA4h4d8+bv3RxW0BQi7Yt+AcorCAYBtfSqqKCJRsBYn7IudA0mjCAMAnHHo/Cda32/jfgH2DgAC/wHgzzHvSAr+9kOA3T2fDvkNAA9kzEk17bE3HcL+Hj8Y+wsAS3KsSuiB1/6DMX7wdInUXwBYl9ZSpztLpPhDALRxh5fNGQWfO8IfHu4Y+wcAuSlsz2uH170dY/ziWe6QXwCQnUiClg+5PWvX/Kzl8iF3CP94lEXqFwCk6PqS1RkjAHkWKX4SAAUUs5Cn7suUIFYAEH7ypKjGDwAo06NSyadilpgBwE/4y4PySj8AYJ3Zt53emAHId4rxmwBoQfcGH5c8YwcgXxp1vNuE2wDQr4ZVBR+7NwiAuW4T+M/hvkNuA0DTJvrW+LguLgDmhP/wowBoIsWZzmW+Nq0SAP9vvoUfHU2ddhcAckt8blcoAF5uw+horpCbANC9mAauPqcGCICXhT8d7ErtJgC08Pa9j48AeHWHGL8KgAYqvJgz+p4cJgBeFX51rILMPQA4yYTDHARAeADgV/wrABY5k4t14xBOZhEAtU+qwb8OnVnmFgAc6MaZViHkxwuA2sK/+FkALJDz4+uBdAKg8YP7HMoRcgcAzrX1felTADS+JOrIOcbuAED+OOfbCoDwAcDPjtQLuAMAJ5zPBNTGXAAsfpg3/hYAVbW+IU1/BEBj0yAHaofdAICc8et3hgVARADgbwdqBdwAoHR8s5mcHBMAEQGAv/F79ACs37Eq3RwJrc+PAKjfRwi/4/+oAaBw+vx4ObhGUQKgvvC75cJ5+wAwDwyxx6cAaKynqOXnAPsAkCL76LuzAiBCAPC75RRp+wDQX97HoncB0JqiefwfLQBkBR67uD3IZrECoDHhf4vZoXYBoFD63NXdQQRnKGq3L/C/xYJ5uwBsObDWXJ6oCICIAcD/xEGUAAwMbbDS90eB7g4A+J84iBIAGibZOOBOge4OAPjfYuMsuwDsGu0zU1NjAiBiAPA/cRAlAFQG2UiBVqC7AwD+t1ghZheAfWe2micz4wIgYgDwP3EQJQCcNG7j0AsFujsA4H/iIEoAhsYGrGSBKtDdAQD/EwdRAjB8YZuV7s8KdHcAwP/EQZQAkA8eSpqCAGhexIH+AggA/QXQM4AA0DOAVoEEgFaBtA8gALQPoJ1gAaCdYOUCCQDlAikbVAAoG1T1AAJA9QCqCBMAqghTTbAAUE2wukKoK4S6QqgvkABQXyB1hhMA6gyn3qACQL1B1R1aAKg7tM4HEAA6H0AnxAgAnRCjM8IEgM4I0ymRAkCnROqcYAGgc4J1UrwA0EnxrgKwcc+aoKZBAmDx6Q/+FgA1KsQef/+VAAgYAPxrsQLMbQA+OvSWuTxxUAAEDAD+xc8CYIHsUDZHfpy9IQACBAC/4l+L2Z9uA4C2H33f3L73hQAIEAD8in8dijf3ANhYXmOOX/pMAAQIAH7FvwKggRTpew9OCoCAAMCfllOf/QFg0943vF8SFQCvLn3iVwHQ8F+BTcm7xgkBEAAA+BF/Ohhn7gJAoTRzRhvdowVAa7s/40eLhe9+ApA3zrLRN0gAtLbvj8XGV34D8G5pdbpu7GPRvACYK3rHf/hRACyjVuDSzf0CwEMA8JsDOf9+A5DnCD18dFoAeHT/+MuhnB+/AaBwevTrT60cpiEAmjv0An9ZLngPB4C8XuCbWxUB4IHwkyP5/uEAgMonP/RmhzhWAPAPfvIkpvwCgBpSVhWmPSidjBEA/IJ/HKj1DRMA1H/gTXP6yq7g+giF0OcHv+Afj+LJPwDQ4JF3vFwaDVn4A794Fkt+ApDnCoXYU9TXHp+O5vqEC8DbO19P15nv3h9VEFoU9scP+EMAtFnvfb467S9v46A9ae6AO+yPHzyNIb8ByCvIOGnct51i34W9sbtjFV7xAZCnTh86/4kgaGPwY29HU5zjAyCHgHckTYeKn/Zg5wCCPywA8ukQc1I9GBf3wIt9PZ/2hAtA/mDMqoSWSFu/1IldPX7gjQOAfImUdWk2Z7RjvPwdXuyIPT1d6owPgOodY7bnpwNqu97u3B7s5+EOrwCozh0iQcv3PkM2sjqxm2e5PQJgoSxSUnTJU/epqMZWMQt2wl4eZXUuC4BK6ABUF9VQqaT9goXX97GPJ8UsrVAFAMqxAJCXV7KawYOdj90miuregD2wiwdljK1UGQAGYwKgutsEc1z61vjafKsVTau4f+zgePeGojQIAH0xApD3HaJpE53LfG7D2Gy7Qu6b+3e4b0/R6gOAnlgBqE6jYJ2bBq6hrxZxf9wn9xtIOsNy1AMAXbEDUN2VmhbevDNymEMIJ9XkJ7NwP9wX9+dgl2Zb6up4LfmX/OeFjPFyThEnmTA35kwrXw/uY9yMn/vgfgLK4WmFXhD7OQDTMkjtM8s40I3VEaYNnG/r+mHejI9xMl7GzfgdOpPLJU1XAzAig9Q/x5j1cU44J7iu3xk2k5Nj1nONuD7jYDyMi/ExTkfO4XVZI9UA9MogS9tZZtmwdHxzOr04P15OsyUffXe28L0FXp/rcD2uy/UZB+OJYOe2leqtBqBTBmlO63esSjePCEAeMMmXP3Zxuzl3dXcy/66k6+wUkUxNjaXTkycz42m6Ae/c+f4DH/mcr/N9fo6f5/f4fV6H1+N1eX2uw/W4LteXH5pS5/8AyCCYlVFa9+zAEuOWA2vNwNCGdK1912hfOiffd2ZrWlE1NDZghi9sS9/B+cjnfJ3v83P8PL/H7/M6vJ7m8i3TbB731QCUZBgpEpVqAdAtw0iRqPsVADIIHss4UuB6XB3z8wHol4GkwNW/IAAZBM9lJClQPZ8f77UAKMtQUqj5/40AsEK5QVKIuT/Edl0AtCQqhb70WReADIJnMpoUiJ4tFOeLAdAnw0mhVH4tGYAMgisynuS5riwW4/UAWJnoJxlR8lTE7sqmAVCqtBRCyvOyAMggqMiYkm9NrxqJ7YYAyCC4JqNKnuhao3HdMACqHZZ8qvUtCgAqx57KyJKjeppXehUCQAZBlyCQHA3+rqXG85IBqPpLoOmQ5My0Z6nv/MsCQA/Gko8PvC0HQEukkg9LnYUCULVZph1jqZ07vL2tiN2WAFCVNqHcIanw3J566Q1WAJiXRapUaqnlKc2LZXU6A8C8ohpVlkmtqOQqFRWnhQFQVV5ZVqG91EwBexY7K4qM0UIBqNFyRX2HpLp9e+a3LgkCgHkd6JgeqReplGs2i4nudsdj2wGosaPMEupItpunZ4Y45vTTmc97m93BDQKARXKNerLVpMFsHshm22HJK1Uy3w1mvuxpJlen6H//BTU+Rz2UVDyxAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" sizes="120x120" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+
+
+
+
+<!-- PWA manifest -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- 파비콘 -->
+
+<title>수련회 영성지도 시스템</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --p1:#6C3CE1;--p2:#8B5CF6;--p3:#C4B5FD;--p4:#EDE9FE;
+  --a1:#F59E0B;--a2:#FCD34D;--a3:#FEF3C7;
+  --t1:#10B981;--t2:#34D399;--t3:#D1FAE5;
+  --r1:#EF4444;--r2:#FCA5A5;
+  --b1:#3B82F6;--b2:#93C5FD;--b3:#DBEAFE;
+  --bg:#F8F7FF;--card:#FFFFFF;--text:#1E1B4B;--text2:#6B7280;
+  --border:rgba(108,60,225,0.12);
+  --shadow:0 4px 20px rgba(108,60,225,0.1);
+  --shadow2:0 8px 32px rgba(108,60,225,0.18);
+}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* ── 카드 ── */
+.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:1.25rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+.card-title{font-size:17px;font-weight:800;color:var(--p1);margin-bottom:.75rem}
+.card-sub{font-size:13px;color:var(--text2);margin-bottom:1rem}
+label{display:block;font-size:12px;font-weight:700;color:var(--p2);margin-bottom:.4rem;letter-spacing:.03em}
+.form-row{margin-bottom:.9rem}
+input[type=text],input[type=date],textarea,select{
+  width:100%;padding:.75rem 1rem;border:2px solid var(--border);border-radius:14px;
+  font-size:14px;font-family:'Nunito',sans-serif;background:#FAFAFA;
+  color:var(--text);resize:vertical;outline:none;transition:all .2s}
+input:focus,textarea:focus,select:focus{border-color:var(--p2);background:#fff;box-shadow:0 0 0 4px rgba(139,92,246,.12)}
+textarea{min-height:80px}
+
+/* ── 버튼 ── */
+.btn{padding:.65rem 1.25rem;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:'Nunito',sans-serif;transition:all .18s;letter-spacing:.02em}
+.btn-green{background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;box-shadow:0 4px 14px rgba(108,60,225,.35)}
+.btn-green:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(108,60,225,.45)}
+.btn-green:active{transform:scale(.97)}
+.btn-sage{background:var(--p4);color:var(--p1);border:1.5px solid var(--p3)}
+.btn-sage:hover{background:var(--p3)}
+.btn-gold{background:linear-gradient(135deg,var(--a1),#F97316);color:#fff;box-shadow:0 4px 14px rgba(245,158,11,.3)}
+.btn-gold:hover{transform:translateY(-1px)}
+.btn-full{width:100%;padding:.85rem;font-size:15px;border-radius:50px}
+.divider{height:2px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:1rem 0}
+.section-label{font-size:11px;font-weight:800;color:var(--p2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+
+/* ── 프로그레스바 ── */
+.pbar{height:10px;background:#EEE;border-radius:50px;overflow:hidden;margin:.4rem 0}
+.pbar-fill{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--t2),var(--t1));transition:width .5s cubic-bezier(.34,1.56,.64,1)}
+
+/* ── 스탯 ── */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1rem}
+.stat-box{background:linear-gradient(135deg,var(--p4),#fff);border-radius:16px;padding:.85rem;text-align:center;border:1.5px solid var(--p3)}
+.stat-num{font-size:24px;font-weight:900;color:var(--p1)}
+.stat-lbl{font-size:10px;color:var(--p2);margin-top:.2rem;font-weight:700}
+
+/* ── 토스트 ── */
+.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;
+  padding:.65rem 1.5rem;border-radius:50px;font-size:13px;font-weight:700;
+  z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;
+  box-shadow:0 8px 24px rgba(108,60,225,.4)}
+.toast.show{opacity:1}
+.empty{text-align:center;padding:2rem;color:#B0B0C0;font-size:14px;line-height:1.8}
+
+/* ── SPLASH ── */
+#splash{
+  background:linear-gradient(145deg,#1E0A5E 0%,#4C1D95 35%,#7C3AED 70%,#A78BFA 100%);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem;text-align:center;position:relative;overflow:hidden}
+#splash::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
+  pointer-events:none}
+.sp-icon{width:88px;height:88px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);
+  border-radius:28px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;
+  font-size:40px;box-shadow:0 8px 32px rgba(0,0,0,.2);backdrop-filter:blur(10px)}
+.sp-title{font-size:30px;font-weight:900;color:#fff;line-height:1.35;margin-bottom:.5rem;letter-spacing:-.02em}
+.sp-sub{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:2.5rem}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:380px;margin-bottom:1.5rem}
+.role-card{
+  background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:1.5rem 1rem;cursor:pointer;transition:all .22s;text-align:center;
+  backdrop-filter:blur(10px)}
+.role-card:hover{background:rgba(255,255,255,.2);transform:translateY(-3px) scale(1.02);box-shadow:0 12px 32px rgba(0,0,0,.2)}
+.role-card.on{background:rgba(255,255,255,.22);border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.3)}
+.role-emoji{font-size:36px;display:block;margin-bottom:.75rem}
+.role-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:.3rem}
+.role-desc{font-size:11px;color:rgba(255,255,255,.6)}
+.sp-btn{background:#fff;color:var(--p1);border:none;padding:.95rem 2.5rem;border-radius:50px;
+  font-size:16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);letter-spacing:.02em}
+.sp-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.sp-btn:active{transform:scale(.97)}
+.sp-btn:disabled{opacity:.45;pointer-events:none}
+
+/* ── 인증 화면 ── */
+.auth-screen{
+  background:linear-gradient(145deg,#1E0A5E 0%,#4C1D95 35%,#7C3AED 70%,#A78BFA 100%);
+  min-height:100vh;display:none;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+.auth-box{
+  background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.22);
+  border-radius:28px;padding:2rem 1.75rem;width:100%;max-width:340px;text-align:center;
+  backdrop-filter:blur(16px)}
+.auth-icon{font-size:44px;margin-bottom:1rem}
+.auth-title{font-size:22px;font-weight:900;color:#fff;margin-bottom:.35rem}
+.auth-sub{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:1.75rem}
+.auth-input{background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.25);color:#fff;
+  border-radius:14px;padding:.8rem 1rem;font-size:16px;text-align:center;
+  font-family:'Nunito',sans-serif;font-weight:700;outline:none;width:100%;margin-bottom:.75rem}
+.auth-input::placeholder{color:rgba(255,255,255,.45)}
+.auth-input:focus{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.25)}
+.auth-select{background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.25);color:#fff;
+  border-radius:14px;padding:.8rem 1rem;font-size:14px;font-family:'Nunito',sans-serif;font-weight:700;
+  outline:none;width:100%;margin-bottom:1.25rem;-webkit-appearance:none;appearance:none}
+.auth-select option{background:#4C1D95;color:#fff}
+.auth-btn{background:#fff;color:var(--p1);border:none;width:100%;padding:.9rem;border-radius:50px;
+  font-size:16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;transition:all .2s;
+  box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.auth-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(0,0,0,.2)}
+.auth-back{background:none;border:2px solid rgba(255,255,255,.25);color:rgba(255,255,255,.7);
+  padding:.4rem 1.1rem;border-radius:50px;font-size:12px;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-weight:700;margin-top:.75rem;display:inline-block;transition:all .2s}
+.auth-back:hover{background:rgba(255,255,255,.1)}
+
+/* ── 비밀번호 패드 ── */
+.pw-dots{display:flex;justify-content:center;gap:12px;margin-bottom:1.75rem}
+.pw-dot{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(255,255,255,.3);transition:all .2s}
+.pw-dot.on{background:#fff;border-color:#fff;transform:scale(1.15);box-shadow:0 0 10px rgba(255,255,255,.5)}
+.pw-dot.err{background:#FF6B6B;border-color:#FF6B6B;animation:shake .4s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.numpad{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1rem}
+.num-btn{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.2);border-radius:16px;
+  padding:.9rem;font-size:24px;font-weight:800;color:#fff;cursor:pointer;transition:all .15s;
+  font-family:'Nunito',sans-serif;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.num-btn:hover{background:rgba(255,255,255,.25);transform:scale(1.06)}
+.num-btn:active{transform:scale(.93)}
+.num-btn.empty{background:transparent;border-color:transparent;pointer-events:none}
+.pw-err{font-size:12px;color:#FF9999;min-height:18px;margin-bottom:.5rem;font-weight:700}
+.pw-hint{font-size:11px;color:rgba(255,255,255,.35);margin-top:.75rem}
+
+/* ── 메인 앱 ── */
+#main-app{flex-direction:column;min-height:100vh;display:none}
+header{
+  background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;
+  padding:.9rem 1.25rem;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(108,60,225,.3)}
+.h-logo{font-size:17px;font-weight:900;letter-spacing:-.02em}
+.h-badge{background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.3);
+  border-radius:50px;padding:.25rem .9rem;font-size:12px;color:#fff;font-weight:700}
+.h-back{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);
+  color:#fff;padding:.3rem .85rem;border-radius:50px;font-size:12px;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-weight:700;transition:all .2s}
+.h-back:hover{background:rgba(255,255,255,.25)}
+
+/* ── 탭 네비 ── */
+nav{background:#fff;border-bottom:2px solid var(--border);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nav-tab{flex:1;min-width:62px;padding:.65rem .2rem;text-align:center;font-size:10px;
+  color:#B0B0C0;border-bottom:3px solid transparent;cursor:pointer;transition:all .2s;
+  white-space:nowrap;font-weight:700}
+.nav-tab.on{color:var(--p1);border-bottom-color:var(--p1);background:var(--p4)}
+.nav-icon{font-size:16px;display:block;margin-bottom:2px}
+main{flex:1;padding:1rem;max-width:700px;margin:0 auto;width:100%}
+
+/* ── 주간 QT 달력 ── */
+.week-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem;margin:1rem 0}
+.day{aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;cursor:pointer;border:2px solid transparent;transition:all .2s}
+.day-done{background:linear-gradient(135deg,var(--t2),var(--t1));color:#fff;box-shadow:0 3px 10px rgba(16,185,129,.3)}
+.day-none{background:#F0F0F8;color:#C0C0D0}
+.day-today{background:linear-gradient(135deg,var(--a2),var(--a1));color:#fff;box-shadow:0 3px 10px rgba(245,158,11,.3)}
+
+/* ── QT 아이템 ── */
+.qt-item{border-left:4px solid var(--p2);padding:.8rem 1rem;margin-bottom:.75rem;
+  background:linear-gradient(135deg,var(--p4),#fff);border-radius:0 14px 14px 0}
+.qt-date{font-size:11px;color:var(--text2);margin-bottom:.2rem;font-weight:700}
+.qt-verse{font-size:13px;font-weight:800;color:var(--p1);margin-bottom:.25rem}
+.qt-text{font-size:13px;color:#444;line-height:1.6}
+.qt-apply{font-size:12px;color:var(--t1);margin-top:.3rem;font-weight:700}
+
+/* ── 기도 아이템 ── */
+.pray-item{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem;
+  border:2px solid var(--border);border-radius:14px;margin-bottom:.6rem;
+  background:linear-gradient(135deg,#fff,var(--p4))}
+.share-on{background:linear-gradient(135deg,var(--t1),var(--t2));color:#fff;font-size:10px;
+  padding:.2rem .6rem;border-radius:50px;font-weight:800;display:inline-block;margin-top:.2rem}
+.share-off{background:#EEE;color:#999;font-size:10px;padding:.2rem .6rem;border-radius:50px;
+  font-weight:700;display:inline-block;margin-top:.2rem}
+
+/* ── 메시지 ── */
+.msg-item{padding:.8rem;border-radius:14px;margin-bottom:.6rem;font-size:13px}
+.msg-recv{background:linear-gradient(135deg,var(--a3),#FFF9F0)}
+.msg-send{background:linear-gradient(135deg,var(--p4),#F0EEFF)}
+.msg-meta{font-size:11px;color:var(--p2);margin-bottom:.25rem;font-weight:700}
+.msg-text{color:var(--text);line-height:1.6;font-weight:600}
+
+/* ── 학생 목록 ── */
+.stu-item{display:flex;align-items:center;gap:.75rem;padding:.8rem;
+  border:2px solid var(--border);border-radius:16px;margin-bottom:.6rem;
+  background:#fff;transition:all .2s}
+.stu-item:hover{border-color:var(--p3);background:var(--p4)}
+.stu-av{width:42px;height:42px;border-radius:14px;
+  background:linear-gradient(135deg,var(--p3),var(--p2));
+  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+
+/* ── 말씀 배너 ── */
+.verse-banner{background:linear-gradient(135deg,#1E0A5E,var(--p1),var(--p2));
+  border-radius:20px;padding:1.5rem;margin-bottom:1rem;text-align:center;color:#fff;
+  position:relative;overflow:hidden}
+.verse-banner::after{content:'✨';position:absolute;right:16px;top:16px;font-size:20px;opacity:.5}
+.verse-text{font-family:'Nanum Myeongjo',serif;font-size:15px;line-height:1.8;margin-bottom:.4rem}
+.verse-ref{font-size:12px;opacity:.7}
+.apply-item{border:2px solid var(--border);border-radius:16px;padding:1rem;margin-bottom:.75rem;
+  background:linear-gradient(135deg,#fff,var(--p4));transition:all .2s}
+.apply-item:hover{border-color:var(--p3)}
+
+/* ── 신앙 일기 ── */
+.diary-q{margin-bottom:1.1rem}
+.diary-q-label{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.diary-q-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0}
+.dq1{background:linear-gradient(135deg,#10B981,#34D399);color:#fff}
+.dq2{background:linear-gradient(135deg,#8B5CF6,#A78BFA);color:#fff}
+.dq3{background:linear-gradient(135deg,#F59E0B,#FCD34D);color:#fff}
+.diary-q-title{font-size:14px;font-weight:800;color:var(--text)}
+.diary-q-hint{font-size:11px;color:#B0B0C0;margin-left:.25rem}
+.diary-entry{background:#fff;border:2px solid var(--border);border-radius:16px;padding:1rem;margin-bottom:.75rem}
+.diary-entry-date{font-size:11px;color:var(--text2);margin-bottom:.6rem;display:flex;align-items:center;gap:.4rem;font-weight:700}
+.diary-entry-date-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--p2),var(--p1));flex-shrink:0}
+.diary-entry-row{display:flex;gap:.6rem;margin-bottom:.5rem;align-items:flex-start}
+.diary-entry-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.diary-entry-body{flex:1}
+.diary-entry-cat{font-size:10px;font-weight:800;letter-spacing:.05em;margin-bottom:2px}
+.ec1{color:#10B981}.ec2{color:#8B5CF6}.ec3{color:#F59E0B}
+.diary-entry-text{font-size:13px;color:var(--text);line-height:1.6;font-weight:600}
+.diary-today-banner{border-radius:16px;padding:1rem;margin-bottom:1rem;border:2px solid}
+.diary-saved{background:linear-gradient(135deg,#D1FAE5,#ECFDF5);border-color:#10B981}
+.diary-saved-head{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;font-size:13px;font-weight:800;color:#065F46}
+.diary-char-count{font-size:11px;color:#C0C0D0;text-align:right;margin-top:2px;font-weight:700}
+.streak-row{display:flex;gap:.35rem;margin:1rem 0}
+.streak-cell{flex:1;aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}
+.sc-done{background:linear-gradient(135deg,var(--t2),var(--t1));color:#fff;box-shadow:0 3px 10px rgba(16,185,129,.3)}
+.sc-none{background:#F0F0F8;color:#C0C0D0}
+.sc-today{background:linear-gradient(135deg,var(--a2),var(--a1));color:#fff;box-shadow:0 3px 10px rgba(245,158,11,.3)}
+.teacher-diary-item{border:2px solid var(--border);border-radius:16px;padding:.9rem;margin-bottom:.75rem;background:#fff}
+.tdi-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+.tdi-av{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--t3),var(--t2));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.tdi-name{font-size:14px;font-weight:800;color:var(--text)}
+.tdi-date{font-size:11px;color:var(--text2);font-weight:700}
+
+/* ── 중보기도 ── */
+.pray-req-hero{text-align:center;padding:1.5rem 1rem 1rem}
+.pray-req-btn-wrap{margin:1rem 0}
+.pray-req-main-btn{width:100%;padding:1.1rem;border-radius:20px;border:none;
+  font-family:'Nunito',sans-serif;font-size:17px;font-weight:800;cursor:pointer;transition:all .2s}
+.prb-idle{background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;box-shadow:0 6px 24px rgba(108,60,225,.4)}
+.prb-idle:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(108,60,225,.45)}
+.prb-sent{background:var(--t3);color:var(--t1);border:2px solid var(--t2)}
+.pray-status-card{border-radius:16px;padding:1rem 1.1rem;margin:.75rem 0;border:2px solid}
+.psc-waiting{background:linear-gradient(135deg,#FEF3C7,#FFFBEB);border-color:var(--a1)}
+.psc-done{background:linear-gradient(135deg,var(--t3),#ECFDF5);border-color:var(--t1)}
+.psc-head{display:flex;align-items:center;gap:.5rem;font-size:13px;font-weight:800;margin-bottom:.35rem}
+.psc-waiting .psc-head{color:#92400E}
+.psc-done .psc-head{color:#065F46}
+.psc-meta{font-size:11px;color:var(--text2);font-weight:700}
+.psc-response{font-size:13px;color:#065F46;margin-top:.4rem;padding:.5rem .7rem;background:rgba(255,255,255,.7);border-radius:10px;font-weight:600}
+.pray-req-history-item{display:flex;gap:.75rem;padding:.75rem;border:2px solid var(--border);border-radius:14px;margin-bottom:.6rem;background:#fff;align-items:flex-start}
+.prhi-status{flex-shrink:0;margin-top:2px}
+.prhi-dot{width:12px;height:12px;border-radius:50%;margin-top:3px}
+.dot-wait{background:var(--a1)}
+.dot-done{background:var(--t1)}
+.prhi-body{flex:1}
+.prhi-msg{font-size:13px;color:var(--text);line-height:1.5;margin-bottom:.25rem;font-weight:600}
+.prhi-meta{font-size:11px;color:var(--text2);font-weight:700}
+.prhi-resp{font-size:12px;color:#065F46;margin-top:.35rem;padding:.35rem .6rem;background:var(--t3);border-radius:8px;font-weight:700}
+.teacher-pray-item{border:2px solid var(--border);border-radius:16px;padding:1rem;margin-bottom:.75rem;background:#fff}
+.tpi-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+.tpi-left{display:flex;align-items:center;gap:.6rem}
+.tpi-av{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--t3),var(--t2));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.tpi-name{font-size:14px;font-weight:800;color:var(--text)}
+.tpi-time{font-size:11px;color:var(--text2);font-weight:700}
+.tpi-badge{font-size:11px;padding:.25rem .7rem;border-radius:50px;font-weight:800;flex-shrink:0}
+.tb-wait{background:linear-gradient(135deg,#FEF3C7,#FDE68A);color:#92400E}
+.tb-done{background:linear-gradient(135deg,var(--t3),#A7F3D0);color:#065F46}
+.tpi-msg{font-size:13px;color:var(--text);line-height:1.6;margin-bottom:.75rem;padding:.65rem .8rem;background:var(--bg);border-radius:10px;font-weight:600}
+.tpi-msg-empty{font-size:12px;color:#C0C0D0;font-style:italic;margin-bottom:.75rem;font-weight:700}
+.tpi-reply-row{display:flex;gap:.5rem;align-items:center}
+.reply-quick-row{display:flex;gap:.4rem;flex-wrap:wrap;margin:.5rem 0}
+
+/* ── 3줄 기도 ── */
+.p3-hero{text-align:center;padding:1rem 0 .5rem}
+.p3-quote{font-family:'Nanum Myeongjo',serif;font-size:14px;color:#5B4507;line-height:1.8;
+  margin-bottom:1.25rem;padding:.8rem 1rem;
+  background:linear-gradient(135deg,#FEF3C7,#FDE68A);border-radius:14px;border-left:4px solid var(--a1)}
+.p3-block{margin-bottom:1rem}
+.p3-label{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
+.p3-num{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.p3-title{font-size:14px;font-weight:800;color:var(--text)}
+.p3-hint{font-size:11px;color:#C0C0D0;margin-top:2px}
+.p3-today-saved{border-radius:16px;padding:1rem 1.1rem;margin-bottom:.75rem}
+.p3-saved-green{background:linear-gradient(135deg,var(--t3),#ECFDF5);border:2px solid var(--t1)}
+.p3-saved-head{display:flex;align-items:center;gap:.5rem;font-size:13px;font-weight:800;color:#065F46;margin-bottom:.6rem}
+.p3-saved-row{display:flex;gap:.6rem;margin-bottom:.45rem;align-items:flex-start}
+.p3-saved-icon{font-size:16px;flex-shrink:0}
+.p3-saved-body{flex:1}
+.p3-saved-cat{font-size:10px;font-weight:800;letter-spacing:.05em;margin-bottom:2px}
+.cat-thanks{color:#D97706}.cat-confess{color:#7C3AED}.cat-ask{color:#059669}
+.p3-saved-text{font-size:13px;color:var(--text);line-height:1.55;font-weight:600}
+.p3-streak{display:flex;gap:.35rem;margin:1rem 0}
+.p3-cell{flex:1;aspect-ratio:1;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.p3c-done{background:linear-gradient(135deg,var(--t2),var(--t1));box-shadow:0 3px 10px rgba(16,185,129,.25)}
+.p3c-none{background:#F0F0F8}
+.p3c-today{background:linear-gradient(135deg,var(--a2),var(--a1));box-shadow:0 3px 10px rgba(245,158,11,.25)}
+.p3c-day{font-size:9px;font-weight:800;color:#C0C0D0}
+.p3c-day-done{color:#fff}.p3c-day-today{color:#fff}
+.p3c-icon{font-size:14px;line-height:1}
+.p3-hist-item{border:2px solid var(--border);border-radius:14px;padding:.9rem 1rem;margin-bottom:.65rem;background:#fff}
+.p3-hist-date{font-size:11px;color:var(--text2);margin-bottom:.55rem;display:flex;align-items:center;gap:.4rem;font-weight:700}
+.p3-hist-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--p2),var(--p1));flex-shrink:0}
+.p3-share-badge{font-size:10px;padding:.2rem .55rem;border-radius:50px;font-weight:800;margin-left:auto}
+.p3sb-on{background:linear-gradient(135deg,var(--t1),var(--t2));color:#fff}
+.p3sb-off{background:#EEE;color:#AAA}
+.teacher-p3-item{border:2px solid var(--border);border-radius:16px;padding:1rem 1.1rem;margin-bottom:.75rem;background:#fff}
+.tp3-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem}
+.tp3-av{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--t3),var(--t2));display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.tp3-name{font-size:14px;font-weight:800;color:var(--text)}
+.tp3-date{font-size:11px;color:var(--text2);font-weight:700}
+.p3-stat-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.5rem 0 .75rem}
+.p3-sm{background:var(--p4);border-radius:10px;padding:.5rem;text-align:center}
+.p3-sm-n{font-size:18px;font-weight:900;color:var(--p1)}
+.p3-sm-l{font-size:9px;color:var(--p2);margin-top:1px;font-weight:800}
+.kw-cloud{display:flex;flex-wrap:wrap;gap:.4rem;margin:.5rem 0}
+.kw-chip{padding:.3rem .75rem;border-radius:50px;font-size:12px;font-weight:800}
+.kw-thanks{background:linear-gradient(135deg,#FEF3C7,#FDE68A);color:#92400E}
+.kw-confess{background:linear-gradient(135deg,var(--p4),#DDD6FE);color:#5B21B6}
+.kw-ask{background:linear-gradient(135deg,var(--t3),#A7F3D0);color:#065F46}
+
+/* ── 공감 QT ── */
+.eqt-verse-card{background:linear-gradient(145deg,#1E0A5E,var(--p1),var(--p2));
+  border-radius:20px;padding:1.5rem 1.25rem;margin-bottom:1.25rem;color:#fff;text-align:center}
+.eqt-verse-ref{font-size:11px;color:rgba(255,255,255,.6);margin-bottom:.5rem;letter-spacing:.06em;font-weight:700}
+.eqt-verse-text{font-family:'Nanum Myeongjo',serif;font-size:16px;line-height:1.8;margin-bottom:.75rem}
+.eqt-verse-nav{display:flex;align-items:center;justify-content:center;gap:.75rem}
+.eqt-nav-btn{background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.3);color:#fff;
+  border-radius:50px;padding:.28rem .9rem;font-size:12px;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-weight:700;transition:all .15s}
+.eqt-nav-btn:hover{background:rgba(255,255,255,.3)}
+.eqt-verse-idx{font-size:11px;color:rgba(255,255,255,.5);font-weight:700}
+.eqt-choices{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:.75rem}
+.eqt-choice{padding:.75rem;border-radius:14px;border:2px solid var(--border);background:#fff;
+  cursor:pointer;transition:all .18s;text-align:center;font-size:13px;color:var(--text);
+  line-height:1.4;font-weight:700}
+.eqt-choice:hover{border-color:var(--p3);background:var(--p4);transform:translateY(-1px)}
+.eqt-choice.sel{border-color:var(--p1);background:linear-gradient(135deg,var(--p4),var(--p3));
+  font-weight:800;color:var(--p1);box-shadow:0 4px 14px rgba(108,60,225,.2)}
+.eqt-choice-em{font-size:22px;display:block;margin-bottom:.3rem}
+.eqt-done-banner{background:linear-gradient(135deg,var(--t3),#ECFDF5);border:2px solid var(--t1);
+  border-radius:14px;padding:.9rem 1rem;margin-bottom:1rem;display:flex;align-items:flex-start;gap:.75rem}
+.eqt-done-em{font-size:24px;flex-shrink:0}
+.eqt-done-label{font-size:12px;font-weight:800;color:#065F46;margin-bottom:.2rem}
+.eqt-done-sel{font-size:13px;color:#047857;font-weight:700}
+.eqt-done-comment{font-size:12px;color:#10B981;margin-top:2px;font-style:italic}
+.eqt-history-item{border:2px solid var(--border);border-radius:14px;padding:.9rem;margin-bottom:.6rem;background:#fff}
+.eqt-hi-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem}
+.eqt-hi-date{font-size:11px;color:var(--text2);font-weight:700}
+.eqt-hi-sel{font-size:12px;font-weight:800;padding:.2rem .65rem;border-radius:50px}
+.eqt-hi-verse{font-size:12px;color:var(--p1);margin-bottom:.35rem;font-weight:800}
+.eqt-hi-comment{font-size:12px;color:#666;font-style:italic;font-weight:600}
+.eqt-agg-row{display:flex;align-items:center;gap:.6rem;margin-bottom:.5rem}
+.eqt-agg-label{font-size:13px;color:var(--text);width:90px;flex-shrink:0;font-weight:700}
+.eqt-agg-bar-wrap{flex:1;background:#EEE;border-radius:50px;height:10px;overflow:hidden}
+.eqt-agg-bar{height:100%;border-radius:50px;background:linear-gradient(90deg,var(--p3),var(--p1));transition:width .6s ease}
+.eqt-agg-count{font-size:12px;color:var(--text2);width:30px;text-align:right;flex-shrink:0;font-weight:700}
+
+/* ── 신앙 온도계 ── */
+.thermo-wrap{text-align:center;padding:1rem 0}
+.thermo-title{font-size:19px;font-weight:900;color:var(--p1);margin-bottom:.4rem}
+.thermo-sub{font-size:13px;color:var(--text2);margin-bottom:1.5rem;font-weight:600}
+.emoji-row{display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.emoji-btn{width:60px;height:68px;border-radius:16px;border:2.5px solid transparent;
+  background:var(--p4);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .18s;gap:3px}
+.emoji-btn span.em{font-size:28px;line-height:1}
+.emoji-btn span.lv{font-size:9px;color:var(--p2);line-height:1;font-weight:700}
+.emoji-btn.sel{border-color:var(--p1);background:linear-gradient(135deg,var(--p4),var(--p3));
+  transform:scale(1.12);box-shadow:0 6px 20px rgba(108,60,225,.25)}
+.emoji-btn:hover:not(.sel){background:var(--p3);transform:scale(1.05)}
+.thermo-bar-wrap{margin:1rem 0 .5rem}
+.thermo-bar{height:14px;border-radius:50px;background:linear-gradient(90deg,#60A5FA,#34D399,#FBBF24,#F97316,#EF4444);
+  position:relative;margin:.5rem 0;box-shadow:inset 0 2px 6px rgba(0,0,0,.1)}
+.thermo-needle{width:22px;height:22px;background:#fff;border:3px solid var(--p1);border-radius:50%;
+  position:absolute;top:50%;transform:translate(-50%,-50%);transition:left .4s cubic-bezier(.34,1.56,.64,1);
+  box-shadow:0 3px 10px rgba(108,60,225,.3)}
+.thermo-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-top:.25rem;font-weight:700}
+.today-log{background:linear-gradient(135deg,var(--p4),#EDE9FE);border-radius:16px;padding:.9rem 1rem;text-align:center;margin:.75rem 0;border:2px solid var(--p3)}
+.today-big{font-size:40px;margin-bottom:.25rem}
+.today-label{font-size:13px;color:var(--p1);font-weight:800}
+.today-comment{font-size:12px;color:var(--p2);margin-top:.2rem;font-weight:600}
+.week-thermo{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;margin:1rem 0}
+.wt-cell{aspect-ratio:1;border-radius:10px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:1px;font-size:9px;color:#C0C0D0;background:#F0F0F8;border:2px solid transparent}
+.wt-cell.has{background:linear-gradient(135deg,var(--p4),var(--p3));color:var(--p1);border-color:var(--p2)}
+.wt-cell.today-cell{background:linear-gradient(135deg,var(--a3),var(--a2));color:#92400E;border-color:var(--a1)}
+.wt-em{font-size:14px;line-height:1}
+.wt-day{font-size:9px;font-weight:800}
+.temp-history-item{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;
+  border:2px solid var(--border);border-radius:12px;margin-bottom:.5rem;background:#fff;transition:all .2s}
+.temp-history-item:hover{border-color:var(--p3);background:var(--p4)}
+.thi-em{font-size:24px;flex-shrink:0}
+.thi-info{flex:1}
+.thi-date{font-size:11px;color:var(--text2);font-weight:700}
+.thi-comment{font-size:13px;color:var(--text);line-height:1.5;font-weight:600}
+.thi-bar{height:6px;border-radius:50px;background:linear-gradient(90deg,var(--p3),var(--p1));margin-top:4px}
+
+/* ── 교사 온도 현황 ── */
+.stu-temp-row{display:flex;align-items:center;gap:.75rem;padding:.7rem;border:2px solid var(--border);border-radius:12px;margin-bottom:.5rem;background:#fff}
+.stu-temp-em{font-size:24px;flex-shrink:0}
+.stu-temp-info{flex:1}
+.stu-temp-name{font-size:14px;font-weight:800;color:var(--text)}
+.stu-temp-meta{font-size:11px;color:var(--text2);font-weight:700}
+.stu-temp-comment{font-size:12px;color:#666;margin-top:3px;font-style:italic;font-weight:600}
+.temp-badge{font-size:11px;padding:.25rem .65rem;border-radius:50px;font-weight:800;flex-shrink:0}
+.tb1{background:linear-gradient(135deg,#DBEAFE,#BFDBFE);color:#1E40AF}
+.tb2{background:linear-gradient(135deg,var(--t3),#A7F3D0);color:#065F46}
+.tb3{background:linear-gradient(135deg,#FEF3C7,#FDE68A);color:#92400E}
+.tb4{background:linear-gradient(135deg,#FFEDD5,#FED7AA);color:#9A3412}
+.tb5{background:linear-gradient(135deg,#FEE2E2,#FECACA);color:#991B1B}
+.alert-item{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border-left:4px solid var(--r1);
+  border-radius:0 12px 12px 0;padding:.7rem .9rem;margin-bottom:.5rem;font-size:13px;color:#991B1B;font-weight:700}
+.comment-input-row{display:flex;gap:.5rem;margin-top:.75rem;align-items:flex-start}
+
+/* ── 3줄 기도 저장 배너 (추가) ── */
+.gen-btn{width:100%;padding:.85rem;border-radius:50px;
+  background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;border:none;
+  font-size:15px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;
+  transition:all .2s;margin-top:.5rem;box-shadow:0 6px 20px rgba(108,60,225,.35)}
+.gen-btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(108,60,225,.45)}
+.gen-btn:disabled{opacity:.5;pointer-events:none}
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="sp-icon">✝</div>
+  <div class="sp-title">수련회 영성지도<br>시스템</div>
+  <div class="sp-sub">나의 결단 · QT · 기도 · 신앙 온도계</div>
+  <div class="role-grid">
+    <div class="role-card" id="rc-s" onclick="pickRole('student')">
+      <span class="role-emoji">🙏</span>
+      <div class="role-name">학생</div>
+      <div class="role-desc">영성 기록 &amp; 성장</div>
+    </div>
+    <div class="role-card" id="rc-t" onclick="pickRole('teacher')">
+      <span class="role-emoji">👩‍🏫</span>
+      <div class="role-name">교사</div>
+      <div class="role-desc">학생 지도 &amp; 관리</div>
+    </div>
+  </div>
+  <button class="sp-btn" id="sp-start" onclick="startFlow()" disabled>시작하기</button>
+</div>
+
+<div id="name-screen" class="auth-screen">
+  <div class="auth-box">
+    <div class="auth-icon">🙏</div>
+    <div class="auth-title">학생 정보 입력</div>
+    <div class="auth-sub">이름과 학년을 입력하고 입장하세요</div>
+    <input class="auth-input" id="ns-name" placeholder="이름을 입력하세요" maxlength="10"
+      onkeydown="if(event.key==='Enter')document.getElementById('ns-grade').focus()">
+    <select class="auth-select" id="ns-grade">
+      <option value="">학년 선택</option>
+      <option>중1</option><option>중2</option><option>중3</option>
+      <option>고1</option><option>고2</option><option>고3</option>
+    </select>
+    <button class="auth-btn" onclick="enterStudent()">입장하기</button>
+    <button class="auth-back" onclick="goSplash()">← 돌아가기</button>
+  </div>
+</div>
+
+<div id="pw-screen" class="auth-screen">
+  <div class="auth-box">
+    <div class="auth-icon">🔐</div>
+    <div class="auth-title">교사 인증</div>
+    <div class="auth-sub">6자리 비밀번호를 입력하세요</div>
+    <div class="pw-dots" id="pw-dots">
+      <div class="pw-dot" id="d0"></div><div class="pw-dot" id="d1"></div>
+      <div class="pw-dot" id="d2"></div><div class="pw-dot" id="d3"></div>
+      <div class="pw-dot" id="d4"></div><div class="pw-dot" id="d5"></div>
+    </div>
+    <div class="pw-err" id="pw-err"></div>
+    <div class="numpad">
+      <button class="num-btn" onclick="np('1')">1</button><button class="num-btn" onclick="np('2')">2</button><button class="num-btn" onclick="np('3')">3</button>
+      <button class="num-btn" onclick="np('4')">4</button><button class="num-btn" onclick="np('5')">5</button><button class="num-btn" onclick="np('6')">6</button>
+      <button class="num-btn" onclick="np('7')">7</button><button class="num-btn" onclick="np('8')">8</button><button class="num-btn" onclick="np('9')">9</button>
+      <button class="num-btn empty"></button><button class="num-btn" onclick="np('0')">0</button><button class="num-btn" onclick="nd()">⌫</button>
+    </div>
+    <button class="auth-back" onclick="goSplash()">← 돌아가기</button>
+    <div class="pw-hint">기본 비밀번호: <strong style="color:rgba(245,230,163,.7)">123456</strong></div>
+  </div>
+</div>
+
+<div id="main-app">
+  <header>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div class="h-logo">✝️ 수련회 영성지도</div>
+      <div class="h-badge" id="h-badge">로딩 중</div>
+    </div>
+    <button class="h-back" onclick="goSplash()">← 처음으로</button>
+  </header>
+  <nav id="nav"></nav>
+  <main id="mc"></main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const TEACHER_PW='123456';
+// ★ GAS API URL (본인 배포 URL로 교체)
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxHlbfZgjvaA_USldRgt5FHW9lrkXKTcDxMgo49hQ1ZQXgo-2984TlhLXqZ7hLVJ_7dsA/exec';
+
+const EMOJIS=[
+  {em:'🥶',lv:'아주 멀다',val:1,color:'#A8D5E2'},
+  {em:'😶',lv:'조금 멀다',val:2,color:'#7DC09B'},
+  {em:'🙂',lv:'보통',val:3,color:'#4A9B5E'},
+  {em:'😊',lv:'가깝다',val:4,color:'#2D7A3A'},
+  {em:'🔥',lv:'아주 가깝다',val:5,color:'#1A5228'},
+];
+
+let role=null,me={이름:'',학년:'',id:''};
+let pwBuf='',pwLock=false,pwFail=0;
+let selectedTemp=null;
+const C={qt:[],적용점:[],기도제목:[],메시지:[],신앙온도:[],신앙일기:[],공감QT:[],중보기도:[],삼줄기도:[]};
+const W=[0,0,0,0,0,0,0];
+
+// ── 공감 QT 말씀 목록 (교사가 앱 내에서 추가 가능) ──
+const VERSES=[
+  {ref:'마 6:33',text:'너희는 먼저 그의 나라와 그의 의를 구하라 그리하면 이 모든 것을 너희에게 더하시리라',choices:[{em:'🎯',label:'도전이 된다'},{em:'🤔',label:'잘 모르겠다'},{em:'😌',label:'위로가 된다'},{em:'😟',label:'실천이 어렵다'}]},
+  {ref:'요 15:5',text:'나는 포도나무요 너희는 가지라 그가 내 안에, 내가 그 안에 거하면 사람이 열매를 많이 맺나니 나를 떠나서는 너희가 아무것도 할 수 없음이라',choices:[{em:'🌿',label:'연결감이 느껴진다'},{em:'💪',label:'힘이 된다'},{em:'😶',label:'무감각하다'},{em:'😢',label:'나는 멀리 있다'}]},
+  {ref:'시 23:1',text:'여호와는 나의 목자시니 내게 부족함이 없으리로다',choices:[{em:'🕊️',label:'평안하다'},{em:'🙏',label:'감사하다'},{em:'😶',label:'잘 모르겠다'},{em:'😔',label:'부족함이 많다'}]},
+  {ref:'빌 4:13',text:'내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라',choices:[{em:'💪',label:'용기가 생긴다'},{em:'😊',label:'힘이 된다'},{em:'🤷',label:'와닿지 않는다'},{em:'😓',label:'지금은 힘들다'}]},
+  {ref:'롬 8:28',text:'우리가 알거니와 하나님을 사랑하는 자 곧 그의 뜻대로 부르심을 입은 자들에게는 모든 것이 합력하여 선을 이루느니라',choices:[{em:'🌈',label:'희망이 된다'},{em:'🙏',label:'감사하다'},{em:'😤',label:'믿기 어렵다'},{em:'😢',label:'지금은 모르겠다'}]},
+  {ref:'잠 3:5-6',text:'너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라',choices:[{em:'✨',label:'신뢰하고 싶다'},{em:'😰',label:'불안하다'},{em:'🤝',label:'의지하겠다'},{em:'😶',label:'아직 어렵다'}]},
+  {ref:'렘 29:11',text:'여호와의 말씀이니라 너희를 향한 나의 생각을 내가 아나니 평안이요 재앙이 아니니라 너희에게 미래와 희망을 주는 것이니라',choices:[{em:'🌟',label:'소망이 생긴다'},{em:'😌',label:'안심이 된다'},{em:'🤔',label:'믿어지지 않는다'},{em:'😢',label:'내 미래가 걱정된다'}]},
+  {ref:'마 11:28',text:'수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라',choices:[{em:'😭',label:'지금 꼭 필요하다'},{em:'🤗',label:'따뜻하다'},{em:'🏃',label:'가야겠다'},{em:'😶',label:'잘 모르겠다'}]},
+];
+let currentVerseIdx=0;
+let selectedChoice=null;
+
+async function gasPost(p){
+  try{
+    var url=GAS_URL+'?action=save&data='+encodeURIComponent(JSON.stringify(p));
+    var r=await fetch(url);
+    var t=await r.text();
+    try{return JSON.parse(t);}catch(x){return{ok:true};}
+  }catch(e){console.error('gasPost err',e);return{ok:false};}
+}
+async function gasGet(type,id=''){try{let url=GAS_URL+'?type='+encodeURIComponent(type);if(id)url+='&id='+encodeURIComponent(id);const r=await fetch(url);if(!r.ok)return[];const j=await r.json();return j.ok?j.data:[];}catch(e){console.error('GET err',e);return[];}}
+
+function pickRole(r){role=r;document.getElementById('rc-s').classList.toggle('on',r==='student');document.getElementById('rc-t').classList.toggle('on',r==='teacher');document.getElementById('sp-start').disabled=false;}
+function startFlow(){if(!role)return;hide('splash');if(role==='student')showEl('name-screen');else showEl('pw-screen');}
+function enterStudent(){
+  const n=document.getElementById('ns-name').value.trim(),g=document.getElementById('ns-grade').value;
+  if(!n){alert('이름을 입력해주세요');return;}if(!g){alert('학년을 선택해주세요');return;}
+  me={이름:n,학년:g,id:n+'_'+g};
+  gasPost({type:'학생등록',학생id:me.id,이름:me.이름,학년:me.학년});
+  hide('name-screen');launch();
+}
+function np(n){if(pwLock||pwBuf.length>=6)return;pwBuf+=n;dots();if(pwBuf.length===6)setTimeout(checkPw,120);}
+function nd(){if(pwLock)return;pwBuf=pwBuf.slice(0,-1);dots();setE('');}
+function dots(){for(let i=0;i<6;i++){const d=document.getElementById('d'+i);d.classList.toggle('on',i<pwBuf.length);d.classList.remove('err');}}
+function setE(m){document.getElementById('pw-err').textContent=m;}
+function checkPw(){
+  if(pwBuf===TEACHER_PW){setE('');hide('pw-screen');launch();}
+  else{pwLock=true;pwFail++;const left=5-pwFail;
+    if(left>0)setE('비밀번호가 틀렸습니다. ('+left+'회 남음)');
+    else{setE('시도 횟수 초과.');setTimeout(()=>{goSplash();pwFail=0;},2000);return;}
+    for(let i=0;i<6;i++){const d=document.getElementById('d'+i);d.classList.remove('on');d.classList.add('err');}
+    setTimeout(()=>{for(let i=0;i<6;i++)document.getElementById('d'+i).classList.remove('err');pwBuf='';dots();pwLock=false;},600);}
+}
+function launch(){
+  const ma=document.getElementById('main-app');ma.style.display='flex';ma.style.flexDirection='column';
+  document.getElementById('h-badge').textContent=role==='student'?me.이름+' ('+me.학년+')':'교사 모드 🔐';
+  buildNav();showTab(0);
+}
+
+// ★ 학생 탭에 신앙 온도계 + 신앙일기 추가
+const ST=[
+  {icon:'🌡️',label:'신앙온도계',fn:sTemp},
+  {icon:'📔',label:'신앙일기',fn:sDiary},
+  {icon:'🕊️',label:'3줄 기도',fn:sPrayer3},
+  {icon:'✝️',label:'공감QT',fn:sEmpathyQT},
+  {icon:'🏕️',label:'나의결단',fn:sApply},
+  {icon:'💬',label:'메시지',fn:sMsg},
+];
+const TT=[
+  {icon:'🌡️',label:'온도 현황',fn:tTemp},
+  {icon:'📔',label:'일기 현황',fn:tDiary},
+  {icon:'🕊️',label:'기도 현황',fn:tPrayer3},
+  {icon:'✝️',label:'공감QT',fn:tEmpathyQT},
+  {icon:'👥',label:'학생 현황',fn:tStudents},
+  {icon:'📖',label:'QT 현황',fn:tQT},
+  {icon:'💌',label:'메시지',fn:tMsg},
+  {icon:'📊',label:'리포트',fn:tReport},
+];
+function buildNav(){const tabs=role==='student'?ST:TT;document.getElementById('nav').innerHTML=tabs.map((t,i)=>'<div class="nav-tab" onclick="showTab('+i+')"><span class="nav-icon">'+t.icon+'</span>'+t.label+'</div>').join('');}
+function showTab(i){document.querySelectorAll('.nav-tab').forEach((t,j)=>t.classList.toggle('on',i===j));const tabs=role==='student'?ST:TT;const mc=document.getElementById('mc');mc.innerHTML='';tabs[i].fn(mc);}
+
+// ════════════════════════════════════════════════════
+//  ★ 학생 탭 2: 신앙 온도계 (기존)
+//  POST → { type:'신앙온도', 학생id, 이름, 날짜, 온도, 이모지, 한마디 }
+// ════════════════════════════════════════════════════
+function sTemp(c){
+  const today=toStr();
+  const todayLog=C.신앙온도.find(r=>r.날짜===today);
+  const days=['일','월','화','수','목','금','토'];
+  const td=new Date().getDay();
+
+  // 7일치 날짜 계산
+  const week=[];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);week.push(d.toISOString().split('T')[0]);}
+
+  const weekCells=week.map((d,i)=>{
+    const log=C.신앙온도.find(r=>r.날짜===d);
+    const dayName=days[new Date(d+'T12:00:00').getDay()];
+    const isToday=d===today;
+    if(log)return'<div class="wt-cell has'+(isToday?' today-cell':'')+'"><span class="wt-em">'+log.이모지+'</span><span class="wt-day">'+dayName+'</span></div>';
+    return'<div class="wt-cell'+(isToday?' today-cell':'')+'"><span class="wt-day">'+dayName+'</span></div>';
+  }).join('');
+
+  const needleLeft=selectedTemp?((selectedTemp-1)/4*90+5)+'%':todayLog?((+todayLog.온도-1)/4*90+5)+'%':'52%';
+
+  c.innerHTML=`
+  <div class="card">
+    <div class="thermo-wrap">
+      <div class="thermo-title">🌡️ 오늘 신앙 온도는?</div>
+      <div class="thermo-sub">지금 하나님과 얼마나 가깝게 느껴지나요?</div>
+      <div class="emoji-row" id="emoji-row">
+        ${EMOJIS.map(e=>'<div class="emoji-btn'+(selectedTemp===e.val||(todayLog&&+todayLog.온도===e.val&&!selectedTemp)?' sel':'')+'" onclick="pickTemp('+e.val+')" title="'+e.lv+'"><span class="em">'+e.em+'</span><span class="lv">'+e.lv+'</span></div>').join('')}
+      </div>
+      <div class="thermo-bar-wrap">
+        <div class="thermo-bar">
+          <div class="thermo-needle" id="thermo-needle" style="left:${needleLeft}"></div>
+        </div>
+        <div class="thermo-labels"><span>🥶 멀다</span><span>🔥 가깝다</span></div>
+      </div>
+    </div>
+    ${todayLog&&!selectedTemp?`
+    <div class="today-log">
+      <div class="today-big">${todayLog.이모지}</div>
+      <div class="today-label">오늘의 온도 · ${EMOJIS.find(e=>e.val==+todayLog.온도)?.lv||''}</div>
+      ${todayLog.한마디?'<div class="today-comment">"'+todayLog.한마디+'"</div>':''}
+    </div>`:''}
+    <div class="form-row" style="margin-top:.75rem">
+      <label>한 마디 (선택)</label>
+      <input type="text" id="temp-comment" placeholder="오늘 이렇게 느낀 이유가 있다면..." maxlength="50" value="${todayLog?.한마디||''}">
+    </div>
+    <button class="btn btn-green btn-full" onclick="saveTemp()" id="temp-save-btn">
+      ${todayLog?'오늘 온도 수정하기':'오늘 온도 저장하기'}
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📅 이번 주 온도 기록</div>
+    <div class="week-thermo">${weekCells}</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📈 최근 기록</div>
+    ${C.신앙온도.length
+      ?C.신앙온도.slice().reverse().slice(0,7).map(r=>'<div class="temp-history-item"><span class="thi-em">'+r.이모지+'</span><div class="thi-info"><div class="thi-date">'+r.날짜+' · '+EMOJIS.find(e=>e.val==+r.온도)?.lv+'</div>'+(r.한마디?'<div class="thi-comment">"'+r.한마디+'"</div>':'')+'<div class="thi-bar" style="width:'+(+r.온도/5*100)+'%;max-width:100%"></div></div></div>').join('')
+      :'<div class="empty">아직 기록이 없어요<br>오늘 처음으로 온도를 기록해보세요 🌡️</div>'}
+  </div>`;
+}
+
+function pickTemp(val){
+  selectedTemp=val;
+  document.querySelectorAll('.emoji-btn').forEach((b,i)=>b.classList.toggle('sel',EMOJIS[i].val===val));
+  const needle=document.getElementById('thermo-needle');
+  if(needle)needle.style.left=((val-1)/4*90+5)+'%';
+}
+
+async function saveTemp(){
+  if(!selectedTemp){toast('이모지를 먼저 선택해주세요');return;}
+  const emoji=EMOJIS.find(e=>e.val===selectedTemp);
+  const comment=document.getElementById('temp-comment').value.trim();
+  const today=toStr();
+  const record={날짜:today,온도:selectedTemp,이모지:emoji.em,한마디:comment};
+
+  // 로컬 캐시 업데이트 (오늘 기록 있으면 교체)
+  const idx=C.신앙온도.findIndex(r=>r.날짜===today);
+  if(idx>=0)C.신앙온도[idx]={...C.신앙온도[idx],...record};
+  else C.신앙온도.push(record);
+
+  // GAS 저장: [신앙온도] 학생id | 이름 | 날짜 | 온도 | 이모지 | 한마디
+  await gasPost({type:'신앙온도',학생id:me.id,이름:me.이름,...record});
+  selectedTemp=null;
+  toast('오늘 신앙 온도가 저장되었습니다 '+emoji.em);
+  sTemp(document.getElementById('mc'));
+}
+
+// ════════════════════════════════════════════════════
+//  학생 탭 2: 하루 3문장 신앙 일기 (신규)
+//  POST → { type:'신앙일기', 학생id, 이름, 날짜, 느낀순간, 고백, 바라는것 }
+// ════════════════════════════════════════════════════
+function sDiary(c){
+  const today=toStr();
+  const todayEntry=C.신앙일기.find(r=>r.날짜===today);
+
+  // 7일 스트릭 계산
+  const week=[];
+  const days=['일','월','화','수','목','금','토'];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);week.push(d.toISOString().split('T')[0]);}
+  const streakCells=week.map(d=>{
+    const has=C.신앙일기.find(r=>r.날짜===d);
+    const dayName=days[new Date(d+'T12:00:00').getDay()];
+    const isToday=d===today;
+    if(has)return'<div class="streak-cell sc-done">'+dayName+'</div>';
+    if(isToday)return'<div class="streak-cell sc-today">'+dayName+'</div>';
+    return'<div class="streak-cell sc-none">'+dayName+'</div>';
+  }).join('');
+
+  const todayBanner = todayEntry ? `
+    <div class="diary-today-banner diary-saved">
+      <div class="diary-saved-head">✅ 오늘의 신앙 일기를 작성했어요!</div>
+      <div class="diary-entry-row"><span class="diary-entry-icon">🌿</span><div><div class="diary-entry-cat ec1">느낀 순간</div><div class="diary-entry-text">${todayEntry.느낀순간}</div></div></div>
+      <div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">🙏</span><div><div class="diary-entry-cat ec2">고백</div><div class="diary-entry-text">${todayEntry.고백}</div></div></div>
+      <div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">⭐</span><div><div class="diary-entry-cat ec3">내일의 소망</div><div class="diary-entry-text">${todayEntry.바라는것}</div></div></div>
+      <div style="margin-top:.75rem;font-size:12px;color:#0F6E56">수정하려면 아래에 다시 작성하세요</div>
+    </div>` : '';
+
+  c.innerHTML=`
+  <div class="card">
+    <div style="text-align:center;padding:.5rem 0 1rem">
+      <div style="font-size:22px;margin-bottom:.35rem">📔</div>
+      <div style="font-family:'Nanum Myeongjo',serif;font-size:18px;font-weight:700;color:var(--g1);margin-bottom:.25rem">하루 3문장 신앙 일기</div>
+      <div style="font-size:12px;color:#888">오늘 하루를 3문장으로 하나님 앞에 정리해보세요</div>
+    </div>
+    <div style="font-size:11px;color:var(--brown);font-weight:600;margin-bottom:.4rem;letter-spacing:.05em">이번 주 기록</div>
+    <div class="streak-row">${streakCells}</div>
+    ${todayBanner}
+    <div class="divider"></div>
+    <div class="diary-q">
+      <div class="diary-q-label">
+        <div class="diary-q-num dq1">1</div>
+        <div class="diary-q-title">오늘 하나님을 느낀 순간</div>
+        <div class="diary-q-hint">어떤 상황에서든</div>
+      </div>
+      <textarea id="dq1" placeholder="예) 친구가 먼저 사과해줬을 때, 급식이 맛있었을 때, 말씀이 마음에 와닿았을 때..." style="min-height:75px">${todayEntry?todayEntry.느낀순간:''}</textarea>
+      <div class="diary-char-count"><span id="cnt1">0</span>/100</div>
+    </div>
+    <div class="diary-q">
+      <div class="diary-q-label">
+        <div class="diary-q-num dq2">2</div>
+        <div class="diary-q-title">오늘 하나님 앞에 고백할 것</div>
+        <div class="diary-q-hint">솔직하게</div>
+      </div>
+      <textarea id="dq2" placeholder="예) 친구에게 짜증냈어요, 게임을 너무 오래 했어요, 기도를 안 했어요..." style="min-height:75px">${todayEntry?todayEntry.고백:''}</textarea>
+      <div class="diary-char-count"><span id="cnt2">0</span>/100</div>
+    </div>
+    <div class="diary-q">
+      <div class="diary-q-label">
+        <div class="diary-q-num dq3">3</div>
+        <div class="diary-q-title">내일 하나님께 바라는 것</div>
+        <div class="diary-q-hint">기도로 올려드리기</div>
+      </div>
+      <textarea id="dq3" placeholder="예) 내일 발표를 잘 할 수 있게, 친구와 화해할 수 있게, 말씀을 잘 읽게..." style="min-height:75px">${todayEntry?todayEntry.바라는것:''}</textarea>
+      <div class="diary-char-count"><span id="cnt3">0</span>/100</div>
+    </div>
+    <button class="btn btn-green btn-full" onclick="saveDiary()" style="margin-top:.25rem">
+      ${todayEntry?'오늘 일기 수정하기':'오늘 일기 저장하기'}
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📖 이전 신앙 일기</div>
+    ${C.신앙일기.length
+      ? C.신앙일기.slice().reverse().map(e=>`
+        <div class="diary-entry">
+          <div class="diary-entry-date">
+            <div class="diary-entry-date-dot"></div>
+            <span>${e.날짜}</span>
+          </div>
+          <div class="diary-entry-row">
+            <span class="diary-entry-icon">🌿</span>
+            <div class="diary-entry-body">
+              <div class="diary-entry-cat ec1">느낀 순간</div>
+              <div class="diary-entry-text">${e.느낀순간}</div>
+            </div>
+          </div>
+          <div class="diary-entry-row">
+            <span class="diary-entry-icon">🙏</span>
+            <div class="diary-entry-body">
+              <div class="diary-entry-cat ec2">고백</div>
+              <div class="diary-entry-text">${e.고백}</div>
+            </div>
+          </div>
+          <div class="diary-entry-row">
+            <span class="diary-entry-icon">⭐</span>
+            <div class="diary-entry-body">
+              <div class="diary-entry-cat ec3">내일의 소망</div>
+              <div class="diary-entry-text">${e.바라는것}</div>
+            </div>
+          </div>
+        </div>`).join('')
+      : '<div class="empty">아직 일기가 없어요<br>오늘 처음으로 작성해보세요 📔</div>'}
+  </div>`;
+
+  // 글자 수 카운터
+  ['1','2','3'].forEach(n=>{
+    const ta=document.getElementById('dq'+n),cnt=document.getElementById('cnt'+n);
+    if(ta&&cnt){cnt.textContent=ta.value.length;ta.addEventListener('input',()=>{cnt.textContent=Math.min(ta.value.length,100);if(ta.value.length>100)ta.value=ta.value.slice(0,100);});}
+  });
+}
+
+async function saveDiary(){
+  const q1=document.getElementById('dq1').value.trim();
+  const q2=document.getElementById('dq2').value.trim();
+  const q3=document.getElementById('dq3').value.trim();
+  if(!q1&&!q2&&!q3){alert('최소 한 문장 이상 작성해주세요');return;}
+  const today=toStr();
+  const entry={날짜:today, 느낀순간:q1, 고백:q2, 바라는것:q3};
+
+  // 로컬 캐시 업데이트
+  const idx=C.신앙일기.findIndex(r=>r.날짜===today);
+  if(idx>=0) C.신앙일기[idx]={...C.신앙일기[idx],...entry};
+  else C.신앙일기.push(entry);
+
+  // GAS 저장: [신앙일기] 학생id | 이름 | 날짜 | 느낀순간 | 고백 | 바라는것
+  await gasPost({type:'신앙일기', 학생id:me.id, 이름:me.이름, ...entry});
+  toast('신앙 일기가 저장되었습니다 📔');
+  sDiary(document.getElementById('mc'));
+}
+
+// ════════════════════════════════════════════════════
+//  ★ 학생 탭 3: 공감 선택형 QT (신규)
+//  POST → { type:'공감QT', 학생id, 이름, 날짜, 말씀, 말씀구절, 선택, 한마디 }
+// ════════════════════════════════════════════════════
+function sEmpathyQT(c){
+  const v=VERSES[currentVerseIdx];
+  const today=toStr();
+  const todayLog=C.공감QT.find(r=>r.날짜===today&&r.말씀구절===v.ref);
+
+  // 이번 주 참여 현황 (날짜별 1건 이상)
+  const week=[];
+  const dayNames=['일','월','화','수','목','금','토'];
+  for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);week.push(d.toISOString().split('T')[0]);}
+  const streakCells=week.map(d=>{
+    const has=C.공감QT.find(r=>r.날짜===d);
+    const dn=dayNames[new Date(d+'T12:00:00').getDay()];
+    if(has)return'<div class="streak-cell sc-done">'+dn+'</div>';
+    if(d===today)return'<div class="streak-cell sc-today">'+dn+'</div>';
+    return'<div class="streak-cell sc-none">'+dn+'</div>';
+  }).join('');
+
+  const choiceColors=['#E1F5EE','#EEEDFE','#FAEEDA','#FAECE7'];
+  const textColors=['#085041','#3C3489','#633806','#712B13'];
+
+  c.innerHTML=`
+  <div class="card">
+    <div style="font-size:11px;color:var(--brown);font-weight:600;letter-spacing:.05em;margin-bottom:.6rem">이번 주 참여</div>
+    <div class="streak-row" style="margin-bottom:1.25rem">${streakCells}</div>
+
+    <div class="eqt-verse-card">
+      <div class="eqt-verse-ref">📖 ${v.ref}</div>
+      <div class="eqt-verse-text">"${v.text}"</div>
+      <div class="eqt-verse-nav">
+        <button class="eqt-nav-btn" onclick="changeVerse(-1)">← 이전</button>
+        <span class="eqt-verse-idx">${currentVerseIdx+1} / ${VERSES.length}</span>
+        <button class="eqt-nav-btn" onclick="changeVerse(1)">다음 →</button>
+      </div>
+    </div>
+
+    ${todayLog&&!selectedChoice?`
+    <div class="eqt-done-banner">
+      <div class="eqt-done-em">${v.choices.find(ch=>ch.label===todayLog.선택)?.em||'✅'}</div>
+      <div>
+        <div class="eqt-done-label">오늘 이 말씀에 이렇게 응답했어요</div>
+        <div class="eqt-done-sel">${todayLog.선택}</div>
+        ${todayLog.한마디?'<div class="eqt-done-comment">"'+todayLog.한마디+'"</div>':''}
+        <div style="margin-top:.4rem;font-size:11px;color:#1D9E75">다시 선택하면 오늘 응답이 수정돼요</div>
+      </div>
+    </div>`:''}
+
+    <div style="font-size:13px;color:#555;text-align:center;margin-bottom:.75rem">이 말씀이 오늘 나에게 어떻게 느껴지나요?</div>
+    <div class="eqt-choices" id="eqt-choices">
+      ${v.choices.map((ch,i)=>`
+      <div class="eqt-choice${selectedChoice===ch.label||(todayLog&&todayLog.선택===ch.label&&!selectedChoice)?' sel':''}"
+           style="${selectedChoice===ch.label||(todayLog&&todayLog.선택===ch.label&&!selectedChoice)?'background:'+choiceColors[i]+';border-color:'+textColors[i]+';color:'+textColors[i]:''}"
+           onclick="pickChoice('${ch.label}',${i})">
+        <span class="eqt-choice-em">${ch.em}</span>
+        ${ch.label}
+      </div>`).join('')}
+    </div>
+
+    <div class="form-row" style="margin-top:.25rem">
+      <label>한 마디 (선택)</label>
+      <input type="text" id="eqt-comment" placeholder="이 말씀을 읽고 떠오른 생각을 한 마디로..." maxlength="60" value="${todayLog?.한마디||''}">
+    </div>
+    <button class="btn btn-green btn-full" onclick="saveEmpathyQT()">
+      ${todayLog?'오늘 응답 수정하기':'응답 저장하기'}
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📋 나의 공감 QT 기록</div>
+    ${C.공감QT.length
+      ?C.공감QT.slice().reverse().map(r=>{
+          const vd=VERSES.find(x=>x.ref===r.말씀구절)||{choices:[]};
+          const ch=vd.choices.find(x=>x.label===r.선택);
+          const idx=vd.choices.indexOf(ch);
+          const bg=idx>=0?choiceColors[idx]:'#E8F0E0';
+          const tc=idx>=0?textColors[idx]:'#2D5016';
+          return'<div class="eqt-history-item"><div class="eqt-hi-head"><span class="eqt-hi-date">'+r.날짜+'</span><span class="eqt-hi-sel" style="background:'+bg+';color:'+tc+'">'+r.선택+'</span></div><div class="eqt-hi-verse">📖 '+r.말씀구절+' "'+r.말씀.slice(0,30)+(r.말씀.length>30?'...':'')+'"</div>'+(r.한마디?'<div class="eqt-hi-comment">"'+r.한마디+'"</div>':'')+'</div>'}).join('')
+      :'<div class="empty">아직 공감 QT 기록이 없어요<br>위 말씀에 응답해보세요 ✝️</div>'}
+  </div>`;
+}
+
+function changeVerse(dir){
+  currentVerseIdx=(currentVerseIdx+dir+VERSES.length)%VERSES.length;
+  selectedChoice=null;
+  sEmpathyQT(document.getElementById('mc'));
+}
+
+function pickChoice(label,idx){
+  selectedChoice=label;
+  const choices=document.querySelectorAll('.eqt-choice');
+  const colors=['#E1F5EE','#EEEDFE','#FAEEDA','#FAECE7'];
+  const tcolors=['#085041','#3C3489','#633806','#712B13'];
+  const bcolors=['#5DCAA5','#7F77DD','#EF9F27','#F0997B'];
+  choices.forEach((el,i)=>{
+    if(i===idx){
+      el.classList.add('sel');
+      el.style.background=colors[i];
+      el.style.borderColor=bcolors[i];
+      el.style.color=tcolors[i];
+    } else {
+      el.classList.remove('sel');
+      el.style.background='';
+      el.style.borderColor='';
+      el.style.color='';
+    }
+  });
+}
+
+async function saveEmpathyQT(){
+  const ch=selectedChoice||C.공감QT.find(r=>r.날짜===toStr()&&r.말씀구절===VERSES[currentVerseIdx].ref)?.선택;
+  if(!ch){toast('먼저 보기를 선택해주세요');return;}
+  const v=VERSES[currentVerseIdx];
+  const comment=document.getElementById('eqt-comment').value.trim();
+  const today=toStr();
+  const record={날짜:today,말씀:v.text,말씀구절:v.ref,선택:ch,한마디:comment};
+
+  const idx=C.공감QT.findIndex(r=>r.날짜===today&&r.말씀구절===v.ref);
+  if(idx>=0)C.공감QT[idx]={...C.공감QT[idx],...record};
+  else C.공감QT.push(record);
+
+  // GAS 저장: [공감QT] 학생id | 이름 | 날짜 | 말씀 | 말씀구절 | 선택 | 한마디
+  await gasPost({type:'공감QT',학생id:me.id,이름:me.이름,...record});
+  selectedChoice=null;
+  toast('공감 QT가 저장되었습니다 ✝️');
+  sEmpathyQT(document.getElementById('mc'));
+}
+
+// ════════════════════════════════════════════════════
+//  학생: 3줄 기도 작성 (신규)
+//  POST → { type:'삼줄기도', 학생id, 이름, 날짜, 감사, 고백, 간구, 공유여부 }
+// ════════════════════════════════════════════════════
+function sPrayer3(c) {
+  const today = toStr();
+  const todayPray = C.삼줄기도.find(r => r.날짜 === today);
+
+  // 이번 주 7일 스트릭
+  const days = ['일','월','화','수','목','금','토'];
+  const week = Array.from({length:7}, (_,i) => {
+    const d = new Date(); d.setDate(d.getDate() - 6 + i);
+    return d.toISOString().split('T')[0];
+  });
+  const streakHtml = week.map(d => {
+    const has = C.삼줄기도.find(r => r.날짜 === d);
+    const dayName = days[new Date(d+'T12:00:00').getDay()];
+    const isToday = d === today;
+    const cls = has ? 'p3c-done' : isToday ? 'p3c-today' : 'p3c-none';
+    const txtCls = has ? 'p3c-day-done' : isToday ? 'p3c-day-today' : 'p3c-day';
+    return `<div class="p3-cell ${cls}">
+      ${has ? '<span class="p3c-icon">🕊️</span>' : ''}
+      <span class="${txtCls}" style="font-size:9px;font-weight:600">${dayName}</span>
+    </div>`;
+  }).join('');
+
+  const savedBanner = todayPray ? `
+    <div class="p3-today-saved p3-saved-green">
+      <div class="p3-saved-head">✅ 오늘의 3줄 기도를 드렸어요</div>
+      <div class="p3-saved-row">
+        <span class="p3-saved-icon">🌿</span>
+        <div class="p3-saved-body">
+          <div class="p3-saved-cat cat-thanks">감사</div>
+          <div class="p3-saved-text">${todayPray.감사||'—'}</div>
+        </div>
+      </div>
+      <div class="p3-saved-row">
+        <span class="p3-saved-icon">🙏</span>
+        <div class="p3-saved-body">
+          <div class="p3-saved-cat cat-confess">고백</div>
+          <div class="p3-saved-text">${todayPray.고백||'—'}</div>
+        </div>
+      </div>
+      <div class="p3-saved-row">
+        <span class="p3-saved-icon">⭐</span>
+        <div class="p3-saved-body">
+          <div class="p3-saved-cat cat-ask">간구</div>
+          <div class="p3-saved-text">${todayPray.간구||'—'}</div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:#0F6E56;margin-top:.6rem">수정하려면 아래에 다시 작성하세요</div>
+    </div>` : '';
+
+  c.innerHTML = `
+  <div class="card">
+    <div class="p3-hero">
+      <div style="font-size:40px;margin-bottom:.35rem">🕊️</div>
+      <div style="font-family:'Nanum Myeongjo',serif;font-size:18px;font-weight:700;color:var(--g1);margin-bottom:.35rem">3줄 기도</div>
+      <div style="font-size:12px;color:#888">감사 · 고백 · 간구, 딱 3줄로 하나님 앞에 나아가요</div>
+    </div>
+    <div class="p3-quote">"아무것도 염려하지 말고 다만 모든 일에 기도와 간구로 너희 구할 것을 감사함으로 하나님께 아뢰라" — 빌립보서 4:6</div>
+
+    <div class="section-label" style="margin-bottom:.4rem">이번 주 기도 기록</div>
+    <div class="p3-streak">${streakHtml}</div>
+
+    ${savedBanner}
+    <div class="divider"></div>
+
+    <div class="p3-block">
+      <div class="p3-label">
+        <div class="p3-num">🌿</div>
+        <div>
+          <div class="p3-title">감사</div>
+          <div class="p3-hint">오늘 하나님께 감사한 것 한 가지</div>
+        </div>
+      </div>
+      <textarea id="p3-감사" placeholder="예) 오늘 친구와 화해할 수 있게 해주셔서 감사해요&#10;예) 맛있는 밥을 먹을 수 있어서 감사해요" style="min-height:72px">${todayPray?.감사||''}</textarea>
+    </div>
+
+    <div class="p3-block">
+      <div class="p3-label">
+        <div class="p3-num">🙏</div>
+        <div>
+          <div class="p3-title">고백</div>
+          <div class="p3-hint">오늘 하나님 앞에 솔직하게 고백할 것</div>
+        </div>
+      </div>
+      <textarea id="p3-고백" placeholder="예) 오늘 친구에게 짜증을 냈어요&#10;예) 기도를 빠뜨린 날이 있어요" style="min-height:72px">${todayPray?.고백||''}</textarea>
+    </div>
+
+    <div class="p3-block">
+      <div class="p3-label">
+        <div class="p3-num">⭐</div>
+        <div>
+          <div class="p3-title">간구</div>
+          <div class="p3-hint">오늘 하나님께 구하는 것</div>
+        </div>
+      </div>
+      <textarea id="p3-간구" placeholder="예) 내일 시험을 잘 치를 수 있게 해주세요&#10;예) 가족 모두 건강하게 해주세요" style="min-height:72px">${todayPray?.간구||''}</textarea>
+    </div>
+
+    <div style="display:flex;gap:.5rem;margin-bottom:.5rem">
+      <button class="btn btn-green btn-full" onclick="savePrayer3('false')" style="flex:2">
+        ${todayPray ? '기도 수정하기' : '기도 저장하기 🕊️'}
+      </button>
+      <button class="btn btn-gold" onclick="savePrayer3('true')" style="flex:1;border-radius:12px">
+        교사 공유
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📜 이전 기도 기록</div>
+    ${C.삼줄기도.length
+      ? C.삼줄기도.slice().reverse().map(p => `
+        <div class="p3-hist-item">
+          <div class="p3-hist-date">
+            <div class="p3-hist-dot"></div>
+            <span>${p.날짜}</span>
+            ${p.시간 ? '<span style="color:#CCC">·</span><span>'+p.시간+'</span>' : ''}
+            <span class="p3-share-badge ${p.공유여부==='true'?'p3sb-on':'p3sb-off'}">${p.공유여부==='true'?'교사 공유':'비공개'}</span>
+          </div>
+          <div class="p3-saved-row"><span class="p3-saved-icon">🌿</span><div class="p3-saved-body"><div class="p3-saved-cat cat-thanks">감사</div><div class="p3-saved-text">${p.감사||'—'}</div></div></div>
+          <div class="p3-saved-row" style="margin-top:.35rem"><span class="p3-saved-icon">🙏</span><div class="p3-saved-body"><div class="p3-saved-cat cat-confess">고백</div><div class="p3-saved-text">${p.고백||'—'}</div></div></div>
+          <div class="p3-saved-row" style="margin-top:.35rem"><span class="p3-saved-icon">⭐</span><div class="p3-saved-body"><div class="p3-saved-cat cat-ask">간구</div><div class="p3-saved-text">${p.간구||'—'}</div></div></div>
+        </div>`).join('')
+      : '<div class="empty">아직 기도 기록이 없어요<br>오늘 첫 3줄 기도를 드려보세요 🕊️</div>'}
+  </div>`;
+}
+
+async function savePrayer3(shared) {
+  const 감사 = document.getElementById('p3-감사').value.trim();
+  const 고백 = document.getElementById('p3-고백').value.trim();
+  const 간구 = document.getElementById('p3-간구').value.trim();
+  if (!감사 && !고백 && !간구) { alert('한 줄이라도 작성해주세요 🙏'); return; }
+
+  const today = toStr();
+  const now   = new Date();
+  const 시간  = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+  const entry = { 날짜:today, 시간, 감사, 고백, 간구, 공유여부:shared };
+
+  // 로컬 캐시
+  const idx = C.삼줄기도.findIndex(r => r.날짜 === today);
+  if (idx >= 0) Object.assign(C.삼줄기도[idx], entry);
+  else C.삼줄기도.push(entry);
+
+  // GAS 저장: [삼줄기도] 기도id | 학생id | 이름 | 날짜 | 시간 | 감사 | 고백 | 간구 | 공유여부
+  await gasPost({ type:'삼줄기도', 학생id:me.id, 이름:me.이름, ...entry });
+
+  toast(shared==='true' ? '기도가 교사에게 공유되었습니다 🕊️' : '기도가 저장되었습니다 🕊️');
+  sPrayer3(document.getElementById('mc'));
+}
+
+// ════════════════════════════════════════════════════
+//  교사: 3줄 기도 현황 (신규)
+//  GET type=삼줄기도 → 학생별 기도 + 키워드 분석
+// ════════════════════════════════════════════════════
+async function tPrayer3(c) {
+  c.innerHTML = '<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const [rows, students] = await Promise.all([gasGet('삼줄기도'), gasGet('학생목록')]);
+
+  const today = toStr();
+  const todayRows   = rows.filter(r => r.날짜 === today);
+  const sharedRows  = rows.filter(r => r.공유여부 === 'true');
+  const notToday    = students.filter(s => !todayRows.find(r => r.학생id === s.학생id));
+
+  // 학생별 최신 기록
+  const latestMap = {};
+  rows.forEach(r => { if (!latestMap[r.학생id] || r.날짜 > latestMap[r.학생id].날짜) latestMap[r.학생id] = r; });
+  const latestArr = Object.values(latestMap);
+
+  // 간구 키워드 분석 (교사가 영성지도에 참고)
+  const kwMap = { 감사:{}, 고백:{}, 간구:{} };
+  const kwList = ['시험','공부','친구','가족','건강','기도','외로움','화','용기','평안','감사','이해','관계'];
+  rows.forEach(r => {
+    ['감사','고백','간구'].forEach(field => {
+      const txt = r[field] || '';
+      kwList.forEach(k => { if (txt.includes(k)) kwMap[field][k] = (kwMap[field][k]||0)+1; });
+    });
+  });
+  const topKw = field => Object.entries(kwMap[field]).sort((a,b)=>b[1]-a[1]).slice(0,4);
+
+  const icons = ['📖','🌱','⛰️','🌸','🌟','✝️'];
+
+  c.innerHTML = `
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-num">${rows.length}</div><div class="stat-lbl">총 기도 수</div></div>
+    <div class="stat-box"><div class="stat-num">${todayRows.length}</div><div class="stat-lbl">오늘 기도</div></div>
+    <div class="stat-box"><div class="stat-num">${sharedRows.length}</div><div class="stat-lbl">공유된 기도</div></div>
+  </div>
+
+  ${notToday.length ? `
+  <div class="card">
+    <div class="card-title">📋 오늘 기도 미기록 학생</div>
+    <div class="kw-cloud">
+      ${notToday.map(s=>`<span class="kw-chip kw-ask">${s.이름}</span>`).join('')}
+    </div>
+  </div>` : ''}
+
+  <div class="card">
+    <div class="card-title">🔍 기도 키워드 분석</div>
+    <div style="font-size:12px;color:#888;margin-bottom:.75rem">학생들의 기도에서 자주 등장하는 단어예요. 영성지도 방향을 잡는 데 참고하세요.</div>
+    ${[['감사','cat-thanks','kw-thanks'],['고백','cat-confess','kw-confess'],['간구','cat-ask','kw-ask']].map(([field,catCls,kwCls]) => `
+    <div style="margin-bottom:.75rem">
+      <div class="p3-saved-cat ${catCls}" style="margin-bottom:.35rem;font-size:11px">
+        ${{감사:'🌿 감사',고백:'🙏 고백',간구:'⭐ 간구'}[field]}
+      </div>
+      <div class="kw-cloud">
+        ${topKw(field).length
+          ? topKw(field).map(([k,v])=>`<span class="kw-chip ${kwCls}">${k} <span style="opacity:.65">${v}회</span></span>`).join('')
+          : '<span style="font-size:12px;color:#AAA">키워드 없음</span>'}
+      </div>
+    </div>`).join('')}
+  </div>
+
+  <div class="card">
+    <div class="card-title">🕊️ 공유된 기도 (교사에게 나눈 기도)</div>
+    ${sharedRows.length
+      ? sharedRows.slice().reverse().slice(0,10).map((p,i) => `
+        <div class="teacher-p3-item">
+          <div class="tp3-head">
+            <div class="tp3-av">${icons[i%6]}</div>
+            <div>
+              <div class="tp3-name">${p.이름}</div>
+              <div class="tp3-date">${p.날짜}${p.시간?' · '+p.시간:''}${p.날짜===today?' · 오늘':''}</div>
+            </div>
+          </div>
+          <div class="p3-saved-row"><span class="p3-saved-icon">🌿</span><div class="p3-saved-body"><div class="p3-saved-cat cat-thanks">감사</div><div class="p3-saved-text">${p.감사||'—'}</div></div></div>
+          <div class="p3-saved-row" style="margin-top:.35rem"><span class="p3-saved-icon">🙏</span><div class="p3-saved-body"><div class="p3-saved-cat cat-confess">고백</div><div class="p3-saved-text">${p.고백||'—'}</div></div></div>
+          <div class="p3-saved-row" style="margin-top:.35rem"><span class="p3-saved-icon">⭐</span><div class="p3-saved-body"><div class="p3-saved-cat cat-ask">간구</div><div class="p3-saved-text">${p.간구||'—'}</div></div></div>
+        </div>`).join('')
+      : '<div class="empty">아직 공유된 기도가 없어요</div>'}
+  </div>
+
+  <div class="card">
+    <div class="card-title">👥 학생별 최근 기도</div>
+    ${latestArr.length
+      ? latestArr.map((p,i) => `
+        <div class="teacher-p3-item">
+          <div class="tp3-head">
+            <div class="tp3-av">${icons[i%6]}</div>
+            <div style="flex:1">
+              <div class="tp3-name">${p.이름}</div>
+              <div class="tp3-date">${p.날짜}${p.날짜===today?' · 오늘':''}</div>
+            </div>
+            <span class="p3-share-badge ${p.공유여부==='true'?'p3sb-on':'p3sb-off'}">${p.공유여부==='true'?'공유':'비공개'}</span>
+          </div>
+          <div class="p3-stat-mini">
+            <div class="p3-sm"><div class="p3-sm-n">🌿</div><div class="p3-sm-l">감사 기록</div></div>
+            <div class="p3-sm"><div class="p3-sm-n">🙏</div><div class="p3-sm-l">고백 기록</div></div>
+            <div class="p3-sm"><div class="p3-sm-n">⭐</div><div class="p3-sm-l">간구 기록</div></div>
+          </div>
+          ${p.감사?'<div class="p3-saved-row"><span class="p3-saved-icon">🌿</span><div class="p3-saved-body"><div class="p3-saved-cat cat-thanks">감사</div><div class="p3-saved-text">'+p.감사+'</div></div></div>':''}
+          ${p.고백?'<div class="p3-saved-row" style="margin-top:.3rem"><span class="p3-saved-icon">🙏</span><div class="p3-saved-body"><div class="p3-saved-cat cat-confess">고백</div><div class="p3-saved-text">'+p.고백+'</div></div></div>':''}
+          ${p.간구?'<div class="p3-saved-row" style="margin-top:.3rem"><span class="p3-saved-icon">⭐</span><div class="p3-saved-body"><div class="p3-saved-cat cat-ask">간구</div><div class="p3-saved-text">'+p.간구+'</div></div></div>':''}
+        </div>`).join('')
+      : '<div class="empty">아직 기도 기록이 없어요</div>'}
+  </div>`;
+}
+
+// ════════════════════════════════════════════════════
+//  학생 탭 4: 나의 결단
+// ════════════════════════════════════════════════════
+function sApply(c){c.innerHTML='<div class="verse-banner"><div class="verse-text">"너희 마음의 눈을 밝히사 그의 부르심의 소망이 무엇이며..."</div><div class="verse-ref">에베소서 1:18</div></div><div class="card"><div class="card-title">🏕️ 나의 결단</div><div class="card-sub">수련회에서 결단한 내용을 기록하고 매일 실천 여부를 체크하세요</div><div id="apply-list">'+renderApplyList()+'</div></div><div class="card"><div class="card-title">➕ 새 결단 추가</div><div class="form-row"><label>결단 내용</label><textarea id="new-apply-txt" placeholder="예) 매일 아침 5분 기도하기..."></textarea></div><button class="btn btn-green btn-full" onclick="addApply()">결단 추가 &amp; 저장</button></div>';}
+function renderApplyList(){if(!C.적용점.length)return'<div class="empty">아직 등록된 결단이 없어요<br>아래에서 추가해보세요 🌱</div>';return C.적용점.map((a,i)=>'<div class="apply-item"><div style="font-size:11px;color:var(--brown);margin-bottom:.3rem">적용점 '+(i+1)+'</div><div style="font-size:14px;color:#2C2416;margin-bottom:.5rem;line-height:1.5">✔ '+a.적용점내용+'</div><div style="display:flex;justify-content:space-between;font-size:11px;color:#888"><span>실천율</span><span id="pct'+i+'">'+a.실천율+'%</span></div><div class="pbar"><div class="pbar-fill" id="pb'+i+'" style="width:'+a.실천율+'%"></div></div><div style="display:flex;gap:.4rem;margin-top:.7rem"><button class="btn btn-sage" style="font-size:12px;padding:.4rem .75rem" onclick="chkApply('+i+',true)">✅ 오늘 실천함</button><button class="btn btn-sage" style="font-size:12px;padding:.4rem .75rem" onclick="chkApply('+i+',false)">😔 못했어요</button></div></div>').join('');}
+async function addApply(){const txt=document.getElementById('new-apply-txt').value.trim();if(!txt){alert('결단 내용을 입력해주세요');return;}C.적용점.push({적용점내용:txt,실천율:'0'});await gasPost({type:'적용점',학생id:me.id,이름:me.이름,적용점내용:txt,실천율:'0'});toast('결단이 저장되었습니다 ✅');sApply(document.getElementById('mc'));}
+async function chkApply(i,done){const a=C.적용점[i];a.실천율=String(done?Math.min(100,+a.실천율+5):Math.max(0,+a.실천율-3));const pct=document.getElementById('pct'+i),pb=document.getElementById('pb'+i);if(pct)pct.textContent=a.실천율+'%';if(pb)pb.style.width=a.실천율+'%';await gasPost({type:'적용점',학생id:me.id,이름:me.이름,적용점내용:a.적용점내용,실천율:a.실천율});toast(done?'실천 기록 저장! 💪':'다음엔 꼭 실천해요 🙏');}
+
+// ════════════════════════════════════════════════════
+//  학생 탭 3: QT
+// ════════════════════════════════════════════════════
+function sQT(c){const days=['일','월','화','수','목','금','토'],td=new Date().getDay();c.innerHTML='<div class="card"><div class="card-title">📖 이번 주 QT 현황</div><div class="week-grid">'+days.map((d,i)=>'<div class="day '+(W[i]?'day-done':i===td?'day-today':'day-none')+'" onclick="togW('+i+')">'+d+'</div>').join('')+'</div><div style="font-size:12px;color:#888;text-align:center">이번 주 '+W.filter(v=>v).length+'/7일 완료</div></div><div class="card"><div class="card-title">✏️ 오늘의 QT 기록</div><div class="form-row"><label>날짜</label><input type="date" id="qt-날짜" value="'+toStr()+'"></div><div class="form-row"><label>말씀 (성경 본문)</label><input type="text" id="qt-말씀" placeholder="예) 요한복음 15:5"></div><div class="form-row"><label>묵상 (깨달은 내용)</label><textarea id="qt-묵상" placeholder="오늘 말씀을 통해 깨달은 것을 적어보세요..."></textarea></div><div class="form-row"><label>적용 (오늘의 결단)</label><textarea id="qt-적용" placeholder="말씀을 통해 오늘 어떻게 살겠나요?" style="min-height:60px"></textarea></div><button class="btn btn-green btn-full" onclick="saveQT()">QT 기록 저장</button></div><div class="card"><div class="card-title">📚 이전 QT 기록</div>'+(C.qt.length?C.qt.slice().reverse().map(q=>'<div class="qt-item"><div class="qt-date">'+q.날짜+'</div><div class="qt-verse">📖 '+q.말씀+'</div><div class="qt-text">'+q.묵상+'</div><div class="qt-apply">→ 결단: '+q.적용+'</div></div>').join(''):'<div class="empty">아직 QT 기록이 없어요 📖</div>')+'</div>';}
+function togW(i){W[i]=W[i]?0:1;sQT(document.getElementById('mc'));}
+async function saveQT(){const 날짜=document.getElementById('qt-날짜').value,말씀=document.getElementById('qt-말씀').value.trim(),묵상=document.getElementById('qt-묵상').value.trim(),적용=document.getElementById('qt-적용').value.trim();if(!말씀||!묵상){alert('말씀과 묵상 내용을 입력해주세요');return;}C.qt.push({날짜,말씀,묵상,적용});W[new Date().getDay()]=1;await gasPost({type:'QT',학생id:me.id,이름:me.이름,날짜,말씀,묵상,적용});toast('QT 기록이 저장되었습니다 📖');sQT(document.getElementById('mc'));}
+
+// ════════════════════════════════════════════════════
+//  학생 탭 4: 기도
+// ════════════════════════════════════════════════════
+function sPrayer(c){c.innerHTML='<div class="card"><div class="card-title">🙏 나의 기도 제목</div><div id="pray-list">'+(C.기도제목.length?C.기도제목.map((p,i)=>'<div class="pray-item"><span style="font-size:18px;flex-shrink:0">🕊️</span><div style="flex:1"><div style="font-size:14px;color:#2C2416;line-height:1.6">'+p.기도제목+'</div><span class="'+(p.공유여부==='true'?'share-on':'share-off')+'">'+(p.공유여부==='true'?'교사 공유 중':'비공개')+'</span></div><button onclick="delPray('+i+')" style="background:none;border:none;color:#CCC;cursor:pointer;font-size:18px">✕</button></div>').join(''):'<div class="empty">기도 제목을 추가해보세요 🙏</div>')+'</div><div class="divider"></div><div class="form-row"><label>새 기도 제목</label><textarea id="new-pray" placeholder="마음에 품고 있는 기도 제목을 적어보세요..." style="min-height:70px"></textarea></div><div style="display:flex;gap:.5rem"><button class="btn btn-green" style="flex:1" onclick="addPray(\'false\')">나만 보기</button><button class="btn btn-gold" style="flex:1" onclick="addPray(\'true\')">교사와 나누기</button></div></div><div class="card" style="background:linear-gradient(135deg,#F5E6A3 0%,#FEF9F0 100%)"><div class="card-title" style="color:var(--brown)">💌 전체 기도 제목 공유</div><div style="font-size:13px;color:var(--brown);margin-bottom:.75rem">비공개 기도 제목을 담임 교사에게 공유하면 함께 중보할 수 있어요</div><button class="btn btn-gold btn-full" onclick="shareAll()">전체 공유하기</button></div>';}
+function delPray(i){C.기도제목.splice(i,1);sPrayer(document.getElementById('mc'));}
+async function addPray(shared){const txt=document.getElementById('new-pray').value.trim();if(!txt)return;C.기도제목.push({기도제목:txt,공유여부:shared});await gasPost({type:'기도제목',학생id:me.id,이름:me.이름,기도제목:txt,공유여부:shared});toast('기도 제목이 저장되었습니다 🙏');sPrayer(document.getElementById('mc'));}
+async function shareAll(){const priv=C.기도제목.filter(p=>p.공유여부!=='true');if(!priv.length){toast('공유할 기도 제목이 없어요');return;}for(const p of priv){p.공유여부='true';await gasPost({type:'기도제목',학생id:me.id,이름:me.이름,기도제목:p.기도제목,공유여부:'true'});}toast('교사에게 기도 제목이 공유되었습니다 🙏');sPrayer(document.getElementById('mc'));}
+
+// ════════════════════════════════════════════════════
+//  학생 탭 5: 메시지
+// ════════════════════════════════════════════════════
+function sMsg(c){const msgs=C.메시지.filter(m=>m.발신자===me.이름||m.수신자===me.이름);c.innerHTML='<div class="card"><div class="card-title">💬 교사 메시지</div><div style="margin-bottom:1rem">'+(msgs.length?msgs.map(m=>'<div class="msg-item '+(m.발신자===me.이름?'msg-send':'msg-recv')+'"><div class="msg-meta">'+m.발신자+' → '+m.수신자+'</div><div class="msg-text">'+m.내용+'</div></div>').join(''):'<div class="empty">아직 메시지가 없어요 💬</div>')+'</div><div class="divider"></div><div class="form-row"><label>교사에게 보내기</label><textarea id="my-msg" placeholder="선생님께 하고 싶은 말을 적어보세요..." style="min-height:70px"></textarea></div><button class="btn btn-green btn-full" onclick="sendMsg()">메시지 보내기</button></div>';}
+async function sendMsg(){const 내용=document.getElementById('my-msg').value.trim();if(!내용)return;C.메시지.push({발신자:me.이름,수신자:'교사',내용});await gasPost({type:'메시지',발신자:me.이름,수신자:'교사',내용});toast('메시지를 보냈습니다 ✉️');sMsg(document.getElementById('mc'));}
+
+// (AI 멘토 탭 삭제됨)
+
+// ════════════════════════════════════════════════════
+//  ★ 교사 탭 2: 신앙 온도 현황 (기존)
+//  GET type=신앙온도 → 최신 기록 기준 학생별 정리
+// ════════════════════════════════════════════════════
+async function tTemp(c){
+  c.innerHTML='<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const [rows, students] = await Promise.all([gasGet('신앙온도'), gasGet('학생목록')]);
+
+  // 학생별 최신 온도 추출
+  const latest={};
+  rows.forEach(r=>{if(!latest[r.학생id]||r.날짜>latest[r.학생id].날짜)latest[r.학생id]=r;});
+  const latestArr=Object.values(latest);
+
+  // 온도 1~2 (저온) 학생
+  const cold=latestArr.filter(r=>+r.온도<=2);
+  // 오늘 미기록 학생
+  const today=toStr();
+  const notToday=students.filter(s=>!rows.find(r=>r.학생id===s.학생id&&r.날짜===today));
+
+  // 평균 온도
+  const avg=latestArr.length?Math.round(latestArr.reduce((s,r)=>s+(+r.온도||0),0)/latestArr.length*10)/10:0;
+
+  const tempBadge=v=>{
+    const e=EMOJIS[Math.min(+v-1,4)];
+    const cls=['tb1','tb2','tb3','tb4','tb5'][Math.min(+v-1,4)];
+    return'<span class="temp-badge '+cls+'">'+e.em+' '+e.lv+'</span>';
+  };
+
+  c.innerHTML=`
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-num">${latestArr.length}</div><div class="stat-lbl">기록한 학생</div></div>
+    <div class="stat-box"><div class="stat-num">${EMOJIS[Math.round(avg)-1]?.em||'—'}</div><div class="stat-lbl">평균 온도</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:#E65100">${cold.length}</div><div class="stat-lbl">관심 필요</div></div>
+  </div>
+
+  ${cold.length?`<div class="card">
+    <div class="card-title" style="color:#E65100">🚨 관심이 필요한 학생</div>
+    <div style="font-size:12px;color:#BF360C;margin-bottom:.75rem">신앙 온도가 낮습니다. 메시지나 기도로 연락해보세요.</div>
+    ${cold.map(r=>'<div class="alert-item">'+r.이모지+' <strong>'+r.이름+'</strong> — '+EMOJIS.find(e=>e.val==+r.온도)?.lv+(r.한마디?' · "'+r.한마디+'"':'')+'<br><span style="font-size:11px;opacity:.8">'+r.날짜+'</span></div>').join('')}
+  </div>`:''}
+
+  <div class="card">
+    <div class="card-title">🌡️ 학생별 최신 온도</div>
+    ${latestArr.length
+      ?latestArr.sort((a,b)=>+a.온도-+b.온도).map(r=>`
+      <div class="stu-temp-row">
+        <span class="stu-temp-em">${r.이모지}</span>
+        <div class="stu-temp-info">
+          <div class="stu-temp-name">${r.이름}</div>
+          <div class="stu-temp-meta">${r.날짜} ${r.날짜===today?'· 오늘':''}</div>
+          ${r.한마디?'<div class="stu-temp-comment">"'+r.한마디+'"</div>':''}
+        </div>
+        ${tempBadge(r.온도)}
+      </div>`).join('')
+      :'<div class="empty">아직 기록한 학생이 없어요</div>'}
+  </div>
+
+  ${notToday.length?`<div class="card">
+    <div class="card-title">📋 오늘 미기록 학생</div>
+    <div style="font-size:12px;color:#888;margin-bottom:.75rem">오늘 신앙 온도를 아직 기록하지 않았어요</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+      ${notToday.map(s=>'<span style="background:var(--sage);color:var(--g1);padding:.25rem .75rem;border-radius:20px;font-size:13px">'+s.이름+'</span>').join('')}
+    </div>
+  </div>`:''}
+
+  <div class="card">
+    <div class="card-title">📊 전체 온도 기록 (최근 20건)</div>
+    ${rows.length
+      ?rows.slice().reverse().slice(0,20).map(r=>'<div class="temp-history-item"><span class="thi-em">'+r.이모지+'</span><div class="thi-info"><div class="stu-temp-name" style="font-size:13px">'+r.이름+'</div><div class="thi-date">'+r.날짜+' · '+EMOJIS.find(e=>e.val==+r.온도)?.lv+'</div>'+(r.한마디?'<div class="thi-comment">"'+r.한마디+'"</div>':'')+'<div class="thi-bar" style="width:'+(+r.온도/5*100)+'%"></div></div></div>').join('')
+      :'<div class="empty">아직 기록이 없어요</div>'}
+  </div>`;
+}
+
+// ════════════════════════════════════════════════════
+//  ★ 교사 탭 2: 신앙 일기 현황 (신규)
+//  GET type=신앙일기 → 학생별 최신 일기 + 전체 타임라인
+// ════════════════════════════════════════════════════
+async function tDiary(c){
+  c.innerHTML='<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const [rows, students] = await Promise.all([gasGet('신앙일기'), gasGet('학생목록')]);
+
+  const today=toStr();
+  // 오늘 작성한 학생
+  const todayWriters=new Set(rows.filter(r=>r.날짜===today).map(r=>r.학생id));
+  // 오늘 미작성 학생
+  const notToday=students.filter(s=>!todayWriters.has(s.학생id));
+  // 학생별 최신 일기
+  const latest={};
+  rows.forEach(r=>{if(!latest[r.학생id]||r.날짜>latest[r.학생id].날짜)latest[r.학생id]=r;});
+  const latestArr=Object.values(latest);
+
+  // 고백 키워드 빈도 (간단 분석)
+  const keywords=['외로움','힘들','화','짜증','기도','감사','친구','가족','공부','시험'];
+  const kwCount={};
+  rows.forEach(r=>{
+    const text=(r.고백||'')+(r.느낀순간||'')+(r.바라는것||'');
+    keywords.forEach(k=>{if(text.includes(k))kwCount[k]=(kwCount[k]||0)+1;});
+  });
+  const topKw=Object.entries(kwCount).sort((a,b)=>b[1]-a[1]).slice(0,5);
+
+  c.innerHTML=`
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-num">${rows.length}</div><div class="stat-lbl">총 일기 수</div></div>
+    <div class="stat-box"><div class="stat-num">${todayWriters.size}</div><div class="stat-lbl">오늘 작성</div></div>
+    <div class="stat-box"><div class="stat-num" style="color:#E65100">${notToday.length}</div><div class="stat-lbl">오늘 미작성</div></div>
+  </div>
+
+  ${topKw.length?`<div class="card">
+    <div class="card-title">🔍 자주 등장하는 키워드</div>
+    <div style="font-size:12px;color:#888;margin-bottom:.75rem">학생들의 일기에서 반복되는 단어입니다. 영성지도 방향에 참고하세요.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+      ${topKw.map(([k,v])=>'<span style="background:var(--sage);color:var(--g1);padding:.3rem .9rem;border-radius:20px;font-size:13px;font-weight:500">'+k+' <span style="font-size:11px;opacity:.7">'+v+'회</span></span>').join('')}
+    </div>
+  </div>`:''}
+
+  ${notToday.length?`<div class="card">
+    <div class="card-title">📋 오늘 미작성 학생</div>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+      ${notToday.map(s=>'<span style="background:#FFF3E0;color:#E65100;padding:.25rem .75rem;border-radius:20px;font-size:13px">'+s.이름+'</span>').join('')}
+    </div>
+  </div>`:''}
+
+  <div class="card">
+    <div class="card-title">📔 학생별 최신 일기</div>
+    ${latestArr.length
+      ? latestArr.sort((a,b)=>b.날짜.localeCompare(a.날짜)).map((e,i)=>`
+        <div class="teacher-diary-item">
+          <div class="tdi-head">
+            <div class="tdi-av">${['📖','🌱','⛰️','🌸','🌟','✝️'][i%6]}</div>
+            <div>
+              <div class="tdi-name">${e.이름}</div>
+              <div class="tdi-date">${e.날짜}${e.날짜===today?' · 오늘 작성':''}</div>
+            </div>
+          </div>
+          ${e.느낀순간?`<div class="diary-entry-row"><span class="diary-entry-icon">🌿</span><div class="diary-entry-body"><div class="diary-entry-cat ec1">느낀 순간</div><div class="diary-entry-text">${e.느낀순간}</div></div></div>`:''}
+          ${e.고백?`<div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">🙏</span><div class="diary-entry-body"><div class="diary-entry-cat ec2">고백</div><div class="diary-entry-text">${e.고백}</div></div></div>`:''}
+          ${e.바라는것?`<div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">⭐</span><div class="diary-entry-body"><div class="diary-entry-cat ec3">내일의 소망</div><div class="diary-entry-text">${e.바라는것}</div></div></div>`:''}
+        </div>`).join('')
+      : '<div class="empty">아직 작성된 일기가 없어요</div>'}
+  </div>
+
+  <div class="card">
+    <div class="card-title">📜 전체 일기 타임라인</div>
+    ${rows.length
+      ? rows.slice().reverse().slice(0,20).map(e=>`
+        <div class="diary-entry">
+          <div class="diary-entry-date">
+            <div class="diary-entry-date-dot"></div>
+            <span style="font-weight:600">${e.이름}</span>
+            <span style="color:#CCC">·</span>
+            <span>${e.날짜}</span>
+          </div>
+          ${e.느낀순간?'<div class="diary-entry-row"><span class="diary-entry-icon">🌿</span><div class="diary-entry-body"><div class="diary-entry-cat ec1">느낀 순간</div><div class="diary-entry-text">'+e.느낀순간+'</div></div></div>':''}
+          ${e.고백?'<div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">🙏</span><div class="diary-entry-body"><div class="diary-entry-cat ec2">고백</div><div class="diary-entry-text">'+e.고백+'</div></div></div>':''}
+          ${e.바라는것?'<div class="diary-entry-row" style="margin-top:.4rem"><span class="diary-entry-icon">⭐</span><div class="diary-entry-body"><div class="diary-entry-cat ec3">내일의 소망</div><div class="diary-entry-text">'+e.바라는것+'</div></div></div>':''}
+        </div>`).join('')
+      : '<div class="empty">아직 작성된 일기가 없어요</div>'}
+  </div>`;
+}
+
+// ════════════════════════════════════════════════════
+//  교사 탭 3: 학생 현황
+// ════════════════════════════════════════════════════
+
+// ════════════════════════════════════════════════════
+//  교사 탭: 공감QT 현황
+// ════════════════════════════════════════════════════
+async function tEmpathyQT(c) {
+  c.innerHTML = '<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const rows = await gasGet('공감QT');
+  const today = toStr();
+  const todayRows = rows.filter(r => r.날짜 === today);
+  const choiceCount = {};
+  rows.forEach(r => { if (r.선택) choiceCount[r.선택] = (choiceCount[r.선택]||0)+1; });
+  const topChoices = Object.entries(choiceCount).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  c.innerHTML =
+    '<div class="stat-grid">' +
+    '<div class="stat-box"><div class="stat-num">' + rows.length + '</div><div class="stat-lbl">총 참여</div></div>' +
+    '<div class="stat-box"><div class="stat-num">' + todayRows.length + '</div><div class="stat-lbl">오늘 참여</div></div>' +
+    '<div class="stat-box"><div class="stat-num">' + new Set(rows.map(r=>r.학생id)).size + '</div><div class="stat-lbl">참여 학생</div></div>' +
+    '</div>' +
+    (topChoices.length ? '<div class="card"><div class="card-title">✝️ 많이 선택된 공감 반응</div>' +
+      topChoices.map(([k,v]) => '<div style="display:flex;justify-content:space-between;font-size:13px;padding:.4rem 0;border-bottom:0.5px solid var(--border)"><span>' + k + '</span><span style="font-weight:600;color:var(--g1)">' + v + '회</span></div>').join('') +
+      '</div>' : '') +
+    '<div class="card"><div class="card-title">📋 공감QT 기록 (최근 20건)</div>' +
+    (rows.length
+      ? rows.slice().reverse().slice(0,20).map(r =>
+          '<div class="qt-item">' +
+          '<div class="qt-date">' + r.날짜 + ' · <strong>' + r.이름 + '</strong></div>' +
+          (r.말씀 ? '<div class="qt-verse">📖 ' + r.말씀 + (r.말씀구절?' '+r.말씀구절:'') + '</div>' : '') +
+          (r.선택 ? '<div style="font-size:12px;color:var(--g1);margin-top:.25rem">→ "' + r.선택 + '"</div>' : '') +
+          (r.한마디 ? '<div style="font-size:12px;color:#555;margin-top:.15rem">"' + r.한마디 + '"</div>' : '') +
+          '</div>'
+        ).join('')
+      : '<div class="empty">아직 공감QT 기록이 없어요 ✝️</div>') +
+    '</div>';
+}
+
+async function tStudents(c){
+  c.innerHTML='<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const[students,applies]=await Promise.all([gasGet('학생목록'),gasGet('적용점')]);
+  const avg=applies.length?Math.round(applies.reduce((s,a)=>s+(+a.실천율||0),0)/applies.length):0;
+  c.innerHTML='<div class="stat-grid"><div class="stat-box"><div class="stat-num">'+students.length+'</div><div class="stat-lbl">전체 학생</div></div><div class="stat-box"><div class="stat-num">'+applies.length+'</div><div class="stat-lbl">결단 기록</div></div><div class="stat-box"><div class="stat-num">'+avg+'%</div><div class="stat-lbl">평균 실천율</div></div></div><div class="card"><div class="card-title">👥 학생 목록</div>'+(students.length?students.map((s,i)=>'<div class="stu-item"><div class="stu-av">'+['📖','🌱','⛰️','🌸','🌟','✝️'][i%6]+'</div><div style="flex:1"><div style="font-size:15px;font-weight:600">'+s.이름+' <span style="font-size:11px;color:#999">'+s.학년+'</span></div><div style="font-size:11px;color:#999">ID: '+s.학생id+'</div></div></div>').join(''):'<div class="empty">학생이 앱에 입장하면 자동 등록됩니다</div>')+'</div>';
+}
+
+// ════════════════════════════════════════════════════
+//  교사 탭 3: QT 현황
+// ════════════════════════════════════════════════════
+async function tQT(c){
+  c.innerHTML='<div class="card"><div class="empty">데이터 불러오는 중...</div></div>';
+  const rows=await gasGet('QT');
+  c.innerHTML='<div class="card"><div class="card-title">📖 전체 QT 기록 <span style="font-size:13px;font-weight:400;color:#888">(총 '+rows.length+'건)</span></div>'+(rows.length?rows.slice().reverse().map(q=>'<div class="qt-item"><div class="qt-date">'+q.날짜+'</div><div class="qt-verse">📖 '+q.말씀+'</div><div class="qt-text">'+q.묵상+'</div><div class="qt-apply">→ 결단: '+q.적용+'</div></div>').join(''):'<div class="empty">아직 QT 기록이 없어요 📖</div>')+'</div>';
+}
+
+// ════════════════════════════════════════════════════
+//  교사 탭 4: 메시지
+// ════════════════════════════════════════════════════
+async function tMsg(c){
+  c.innerHTML='<div class="card"><div class="empty">불러오는 중...</div></div>';
+  const[students,msgs]=await Promise.all([gasGet('학생목록'),gasGet('메시지')]);
+  const received=msgs.filter(m=>m.수신자==='교사').reverse().slice(0,15);
+  c.innerHTML='<div class="card"><div class="card-title">💌 메시지 보내기</div><div class="form-row"><label>수신자</label><select id="msg-to"><option value="전체">전체 학생에게</option>'+students.map(s=>'<option value="'+s.이름+'">'+s.이름+' ('+s.학년+')</option>').join('')+'</select></div><div class="form-row"><label>내용</label><textarea id="teacher-msg" placeholder="학생에게 보낼 격려 메시지를 작성하세요..."></textarea></div><div style="margin-bottom:.75rem"><div class="section-label">빠른 템플릿</div><div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.4rem"><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'오늘 신앙 온도 잘 체크했어요? 하나님과 가까운 하루 되길 기도해요 🌡️\')">온도계 격려</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'이번 주 QT는 잘 하고 있나요? 말씀과 함께하는 방학이 되길 기도해요 📖\')">QT 격려</button><button class="btn btn-sage" style="font-size:11px;padding:.3rem .65rem" onclick="setTpl(\'하나님이 너를 사랑하신다는 것, 오늘도 잊지 말아요 ❤️\')">사랑 메시지</button></div></div><button class="btn btn-green btn-full" onclick="sendTeachMsg()">메시지 전송</button></div><div class="card"><div class="card-title">📨 학생에게 받은 메시지</div>'+(received.length?received.map(m=>'<div class="msg-item msg-recv"><div class="msg-meta">'+m.발신자+' → 교사</div><div class="msg-text">'+m.내용+'</div></div>').join(''):'<div class="empty">받은 메시지가 없어요</div>')+'</div>';
+}
+function setTpl(t){document.getElementById('teacher-msg').value=t;}
+async function sendTeachMsg(){const 내용=document.getElementById('teacher-msg').value.trim();const 수신자=document.getElementById('msg-to').value;if(!내용){alert('메시지를 작성해주세요');return;}await gasPost({type:'메시지',발신자:'교사',수신자,내용});toast(수신자+'에게 메시지를 보냈습니다 ✉️');document.getElementById('teacher-msg').value='';}
+
+// ─── 공통 유틸 ─────────────────────────────────────
+function toStr(){return new Date().toISOString().split('T')[0];}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2500);}
+function showEl(id){const el=document.getElementById(id);el.style.display='flex';el.style.flexDirection='column';el.style.alignItems='center';el.style.justifyContent='center';}
+function hide(id){document.getElementById(id).style.display='none';}
+function goSplash(){['name-screen','pw-screen'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none';});document.getElementById('main-app').style.display='none';document.getElementById('splash').style.display='flex';role=null;me={이름:'',학년:'',id:''};selectedTemp=null;document.getElementById('rc-s').classList.remove('on');document.getElementById('rc-t').classList.remove('on');document.getElementById('sp-start').disabled=true;}
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+</script>
+<script src="/report.js"></script>
+</body>
+</html>
